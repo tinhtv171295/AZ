@@ -4,26 +4,34 @@ import styled from "styled-components";
 type ButtonAppearance = "light" | "dark";
 
 type Props = PropsWithChildren & {
+  href?: string;
+  title?: string;
   appearance?: ButtonAppearance;
   onClick?: () => void;
 };
 
 export default function Button({
   children,
+  href,
+  title,
   appearance = "light",
   onClick,
 }: Props) {
   return (
-    <Stl.Button $appearance={appearance} onClick={onClick}>
+    <Stl.Button
+      href={href}
+      title={title}
+      $appearance={appearance}
+      onClick={onClick}
+    >
       {children}
     </Stl.Button>
   );
 }
 
 const Stl = {
-  Button: styled.button<{ $appearance: ButtonAppearance }>`
+  Button: styled.a<{ $appearance: ButtonAppearance }>`
     display: block !important;
-    margin: 0 auto;
     max-width: 150px;
     text-align: center;
     outline: none;
