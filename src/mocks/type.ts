@@ -1,16 +1,19 @@
+export type BlockType = "main" | "second" | "third" | "four"; // F2 rename
+
 export interface IBlock {
   title: string;
   titleBody?: string;
   linkDetail?: string;
   backgroundUrl?: string;
   content?: string;
-  type: "main" | "second";
-  dataContent?: IBlockContent[];
+  type: BlockType;
+  dataContent: IBlockContent[];
 }
 
 export interface IBlockContent {
-  icon: string;
+  icon?: string;
   title: string;
   description?: string;
+  image?: string;
   linkDetail?: string;
 }
