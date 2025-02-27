@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import Button from "../UI/Button";
 
 type Props = {
   title: string;
@@ -10,10 +11,12 @@ export default function PageBanner({ title, content, image }: Props) {
   return (
     <Stl.Wrap $backgroundUrl={image}>
       <Stl.Content>
-        <div>
-          <a href="#">{title}</a>
-        </div>
-        <h2>{content}</h2>
+        <Stl.Button>
+          <Button appearance="dark" href="#" transparent>
+            {title}
+          </Button>
+        </Stl.Button>
+        {content && <Stl.Content>{content}</Stl.Content>}
       </Stl.Content>
     </Stl.Wrap>
   );
@@ -45,9 +48,19 @@ const Stl = {
       height: 100%;
     }
   `,
+  Button: styled.div`
+    margin-bottom: 5px;
+    a {
+      margin: 0 auto;
+      font-size: 14px;
+    }
+  `,
   Content: styled.div`
     position: relative;
     z-index: 1;
     text-align: center;
+    font-size: 40px;
+    font-weight: 400;
+    margin: 0 0 10px;
   `,
 };
