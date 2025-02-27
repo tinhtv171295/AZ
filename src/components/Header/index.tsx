@@ -1,66 +1,23 @@
-import styled from "styled-components";
-import { ContainerStl } from "../../Styles/Container";
+import Menus from "../../mocks/router.data";
 import Menu from "../Menu";
-import IMenu from "../Menu/type";
-
-const Menus: IMenu[] = [
-  {
-    name: "Trang chủ",
-    path: "/",
-  },
-  {
-    name: "Về chúng tôi",
-    path: "about",
-    menu: [
-      {
-        name: "DLS là ai?",
-        path: "about/about-us",
-      },
-      {
-        name: "Giá trị cốt lõi",
-        path: "about/core-value",
-      },
-    ],
-  },
-  {
-    name: "Sản phẩm",
-    path: "services",
-  },
-  {
-    name: "văn hóa",
-    path: "activities",
-  },
-  {
-    name: "Tuyển dụng",
-    path: "recruitment",
-  },
-  {
-    name: "Liên hệ",
-    path: "contact",
-  },
-];
+import { HeaderStl } from "./style";
 
 export default function Header() {
   return (
-    <Stl.Wrap>
-      <Stl.Inner>
+    <HeaderStl.Wrap>
+      <HeaderStl.Inner>
+        <HeaderStl.WrapLogo>
+          <HeaderStl.Logo>
+            <HeaderStl.LogoLink to="/">
+              <HeaderStl.LogoImg
+                src="https://dlsinc.com/resource/template/frontend/default2/image/logo.svg"
+                alt="Dls logo"
+              />
+            </HeaderStl.LogoLink>
+          </HeaderStl.Logo>
+        </HeaderStl.WrapLogo>
         <Menu menus={Menus} />
-      </Stl.Inner>
-    </Stl.Wrap>
+      </HeaderStl.Inner>
+    </HeaderStl.Wrap>
   );
 }
-
-const Stl = {
-  Wrap: styled.div`
-    display: block;
-    height: fit-content;
-    width: 100%;
-  `,
-  Inner: styled(ContainerStl)`
-    height: 60px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: relative;
-  `,
-};

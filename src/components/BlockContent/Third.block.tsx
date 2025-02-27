@@ -62,7 +62,7 @@ const Stl = {
     font-size: 33px;
     &&::after {
       content: "";
-      background: #428dff;
+      background: var(--color-primary);
       display: block;
       width: 3px;
       height: 25px;

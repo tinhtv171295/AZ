@@ -57,6 +57,7 @@ const Stl = {
   Right: styled.div`
     flex: 0 0 50%;
     width: calc(100% / 12 * 6);
+    margin-left: 8.333333%;
   `,
   Title: styled.h3`
     font-size: 16px;
@@ -71,7 +72,7 @@ const Stl = {
 
     &&::after {
       content: "";
-      background: #428dff;
+      background: var(--color-primary);
       display: block;
       width: 50px;
       height: 3px;
@@ -87,5 +88,6 @@ const Stl = {
   BodyContent: styled.div`
     font-size: 16px;
     line-height: 22px;
+    text-align: justify;
   `,
 };

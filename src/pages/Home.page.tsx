@@ -1,9 +1,8 @@
 import { useEffect, useState } from "react";
-import BlockContent from "../components/BlockContent/Main.block";
-import BlockContentSecond from "../components/BlockContent/Second.block";
 import { IBlock } from "../mocks/type";
-import { homeData } from "../mocks/page.data";
+import { homeData } from "../mocks/home.data";
 import React from "react";
+import RenderLayout from "../utils/RenderLayout";
 
 export default function HomePage() {
   const [data, setData] = useState<IBlock[]>([]);
@@ -17,25 +16,7 @@ export default function HomePage() {
   return (
     <>
       {data.map((block, i) => (
-        <React.Fragment key={i}>
-          {block.type === "main" ? (
-            <BlockContent
-              title={block.title}
-              titleBody={block.titleBody}
-              content={block.content}
-              backgroundUrl={block.backgroundUrl}
-              linkDetail={block.linkDetail}
-            />
-          ) : (
-            <BlockContentSecond
-              title={block.title}
-              titleBody={block.titleBody}
-              content={block.content}
-              backgroundUrl={block.backgroundUrl}
-              linkDetail={block.linkDetail}
-            />
-          )}
-        </React.Fragment>
+        <React.Fragment key={i}>{RenderLayout(block)}</React.Fragment>
       ))}
     </>
   );

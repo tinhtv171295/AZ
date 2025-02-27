@@ -1,12 +1,13 @@
-import styled from "styled-components";
+import { styled } from "styled-components";
 import Button from "../UI/Button";
-import { BlockContentType } from "./type";
 
-export default function BlockHeader({
-  title,
-  titleBody,
-  linkDetail,
-}: BlockContentType) {
+type Props = {
+  title: string;
+  titleBody?: string;
+  linkDetail?: string;
+};
+
+export default function TitleMain({ title, titleBody, linkDetail }: Props) {
   return (
     <Stl.Wrap>
       <Stl.Title>
@@ -55,6 +56,7 @@ const Stl = {
   Content: styled.h3`
     font-size: 35px;
     margin: 0 0 25px;
+    font-weight: 600;
   `,
   ToDetail: styled.div`
     display: block;
