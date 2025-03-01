@@ -35,7 +35,6 @@ export default function Button({
 const Stl = {
   Button: styled.a<{ $appearance: ButtonAppearance; $transparent?: boolean }>`
     display: block !important;
-    max-width: 150px;
     text-align: center;
     outline: none;
     padding: 0 10px;
