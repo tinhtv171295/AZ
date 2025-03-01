@@ -4,6 +4,7 @@ import { BrowserRouter } from "react-router";
 import "./assets/css/reset.css";
 import "./assets/css/font.css";
 import "./assets/css/main.css";
+import "swiper/css";
 
 createRoot(document.getElementById("root")!).render(
   <BrowserRouter>

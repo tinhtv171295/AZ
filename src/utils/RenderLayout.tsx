@@ -45,7 +45,7 @@ export default function RenderLayout(block: IBlock) {
         />
       );
     case "five":
-      return <BlockContentFive {...block} type={"five"} />;
+      return <BlockContentFive {...block} content={block.content} />;
     default:
       return <React.Fragment>aaa</React.Fragment>;
   }
