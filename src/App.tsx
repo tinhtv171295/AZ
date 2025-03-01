@@ -6,7 +6,6 @@ import ActivitiesPage from "./pages/Activities.page";
 import RecruitmentPage from "./pages/Recruitment.page";
 import ContactPage from "./pages/Contact.page";
 import ServicesPage from "./pages/Services.page";
-import CorevaluePage from "./pages/Corevalue.page";
 
 export default function App() {
   return (
@@ -18,11 +17,6 @@ export default function App() {
           <Route path="about/*">
             <Route index element={<AboutPage />} />
             <Route path=":slug" element={<AboutPage />} />
-          </Route>
-
-          <Route path="corevalue/*">
-            <Route index element={<CorevaluePage />} />
-            <Route path=":slug" element={<CorevaluePage />} />
           </Route>
 
           <Route path="services/*">

@@ -1,23 +1,23 @@
 import styled from "styled-components";
 import { IBlock } from "../../mocks/type";
 import { ContainerStl } from "../../Styles/Container";
+import Carousel from "../Carousel/Swiper";
 
-export default function BlockContentFive({ content }: IBlock) {
+export default function BlockContentFive({ title, dataContent }: IBlock) {
   // f12 => to ref
   return (
     <Stl.Wrap>
       <ContainerStl>
         <Stl.Main>
           <Stl.Content>
-            {content && (
-              <Stl.BodyContent
-                dangerouslySetInnerHTML={{
-                  __html: `${content}`,
-                }}
-              />
-            )}
+            <Stl.BodyContent
+              dangerouslySetInnerHTML={{
+                __html: `${title}`,
+              }}
+            />
           </Stl.Content>
         </Stl.Main>
+        <Carousel slides={dataContent} />
       </ContainerStl>
     </Stl.Wrap>
   );
