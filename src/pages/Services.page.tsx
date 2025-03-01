@@ -1,14 +1,22 @@
-import PageBanner from "../components/Banners/PageBanner";
+import { useEffect, useState } from "react";
 import BodyLayout from "../layouts/Body.layout";
+import { serviceData } from "../mocks/service.data";
+import React from "react";
+import { IBlock } from "../mocks/type";
+import RenderLayout from "../utils/RenderLayout";
 
 export default function ServicesPage() {
+  const [data, setData] = useState<IBlock[]>([]);
+
+  useEffect(() => {
+    setData(serviceData);
+  }, []);
+
   return (
     <BodyLayout>
-      <PageBanner
-        title="DLS làm gì?"
-        content="Sản phẩm"
-        image={"https://dlsinc.com/storage/setting/1.0365N5e81dd590a055.jpg"}
-      />
+      {data.map((block, i) => {
+        return <React.Fragment key={i}>{RenderLayout(block)}</React.Fragment>;
+      })}
     </BodyLayout>
   );
 }

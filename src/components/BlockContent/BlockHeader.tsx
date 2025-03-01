@@ -15,7 +15,9 @@ export default function BlockHeader({
       {titleBody && <Stl.Content>{titleBody}</Stl.Content>}
       {linkDetail && (
         <Stl.ToDetail>
-          <Button>Xem thêm</Button>
+          <Button appearance="dark" href={linkDetail}>
+            Xem thêm
+          </Button>
         </Stl.ToDetail>
       )}
     </Stl.Wrap>

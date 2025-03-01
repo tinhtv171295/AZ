@@ -1,13 +1,22 @@
-import PageBanner from "../components/Banners/PageBanner";
+import React from "react";
+import { useEffect, useState } from "react";
 import BodyLayout from "../layouts/Body.layout";
+import { IBlock } from "../mocks/type";
+import RenderLayout from "../utils/RenderLayout";
+import { activitiesData } from "../mocks/activities.data";
 
 export default function ActivitiesPage() {
+  const [data, setData] = useState<IBlock[]>([]);
+
+  useEffect(() => {
+    setData(activitiesData);
+  }, []);
+
   return (
     <BodyLayout>
-      <PageBanner
-        title="Hoạt động & sự kiện"
-        image={"https://dlsinc.com/storage/setting/1.V77F05e81dd6000098.jpg"}
-      />
+      {data.map((block, i) => {
+        return <React.Fragment key={i}>{RenderLayout(block)}</React.Fragment>;
+      })}
     </BodyLayout>
   );
 }

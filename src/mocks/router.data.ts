@@ -24,7 +24,7 @@ const Menus: IMenu[] = [
     path: "services",
   },
   {
-    name: "văn hóa",
+    name: "Văn hóa",
     path: "activities",
   },
   {

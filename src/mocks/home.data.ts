@@ -105,7 +105,7 @@ export const homeData: IBlock[] = [
     title: "Dls làm gì?",
     titleBody: `Thành tựu`,
     linkDetail: "awards",
-    type: "main",
+    type: "six",
     backgroundUrl:
       "https://dlsinc.com/resource/template/frontend/default2/style/../image/bg-chievements.jpg",
     dataContent: [
@@ -128,9 +128,25 @@ export const homeData: IBlock[] = [
     ],
   },
   {
-    title: "Văn hóa",
-    linkDetail: "///",
-    type: "main",
-    dataContent: [],
+    title: "Văn hóa DLS",
+    linkDetail: "activities",
+    backgroundColor: "#f7f7f7",
+    type: "seven",
+    dataContent: [
+      {
+        title: "Chính Sách Phúc Lợi",
+        description:
+          "DLS luôn nỗ lực mang tới những chính sách, chế độ phúc lợi tốt nhất cho từng DLSer.",
+        image: "https://dlsinc.com/storage/section/7.RUVUQ676000fe1b0fe.png",
+        linkDetail: "activities",
+      },
+      {
+        title: "Hoạt Động - Sự Kiện",
+        description:
+          "DLS luôn tự hào là môi trường làm việc năng động, trẻ trung với hàng loạt hoạt động, sự kiện nội bộ ý nghĩa và hấp dẫn.",
+        image: "https://dlsinc.com/storage/section/7.430VL67600101dbb1e.jpg",
+        linkDetail: "activities",
+      },
+    ],
   },
 ];
