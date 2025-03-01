@@ -9,12 +9,21 @@ import BlockContentSix from "../components/BlockContent/Six.block";
 import BlockContentSeven from "../components/BlockContent/Seven.block";
 import PageBanner from "../components/Banners/PageBanner";
 import BlockContentEight from "../components/BlockContent/Eight.block";
+import PageBannerScroll from "../components/Banners/PageBannerScroll";
 
 export default function RenderLayout(block: IBlock) {
   switch (block.type) {
-    case "banner":
+    case "banner-fixed":
       return (
         <PageBanner
+          title={block.title}
+          content={block.titleBody}
+          image={block.backgroundUrl ?? ""}
+        />
+      );
+    case "banner-scroll":
+      return (
+        <PageBannerScroll
           title={block.title}
           content={block.titleBody}
           image={block.backgroundUrl ?? ""}
@@ -58,7 +67,6 @@ export default function RenderLayout(block: IBlock) {
       );
     case "five":
       return <BlockContentFive {...block} content={block.content} />;
-
     case "six":
       return <BlockContentSix {...block} />;
     case "seven":

@@ -1,5 +1,6 @@
 export type BlockType =
-  | "banner"
+  | "banner-fixed"
+  | "banner-scroll"
   | "main"
   | "second"
   | "third"
