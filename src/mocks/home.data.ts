@@ -14,7 +14,7 @@ export const homeData: IBlock[] = [
     title: "Dls làm gì? ",
     titleBody: `Sản phẩm`,
     backgroundColor: "#f7f7f7",
-    type: "five",
+    type: "six",
     dataContent: [
       {
         title: "Thiết kế sáng tạo",

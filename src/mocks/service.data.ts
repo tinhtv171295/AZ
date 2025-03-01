@@ -2,7 +2,7 @@ import { IBlock } from "./type";
 
 export const serviceData: IBlock[] = [
   {
-    type: "banner",
+    type: "banner-fixed",
     title: "DLS làm gì?",
     titleBody: "Sản phẩm",
     backgroundUrl:

@@ -96,18 +96,18 @@ const RowStl = {
     max-width: ${({ $col }) => 100 / $col}%;
     margin: ${({ $margin }) => $margin};
 
-    @media (min-width: 992px) {
-      -ms-flex: 0 0 ${({ $lg }) => 100 / $lg}%;
-      flex: 0 0 ${({ $lg }) => 100 / $lg}%;
-      max-width: ${({ $lg }) => 100 / $lg}%;
-      margin: ${({ $marginLg }) => $marginLg};
-    }
-
     @media (min-width: 768px) {
       -ms-flex: 0 0 ${({ $md }) => 100 / $md}%;
       flex: 0 0 ${({ $md }) => 100 / $md}%;
       max-width: ${({ $md }) => 100 / $md}%;
       margin: ${({ $marginMd }) => $marginMd};
+    }
+
+    @media (min-width: 992px) {
+      -ms-flex: 0 0 ${({ $lg }) => 100 / $lg}%;
+      flex: 0 0 ${({ $lg }) => 100 / $lg}%;
+      max-width: ${({ $lg }) => 100 / $lg}%;
+      margin: ${({ $marginLg }) => $marginLg};
     }
   `,
 };

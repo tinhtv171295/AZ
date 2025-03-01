@@ -2,7 +2,7 @@ import { IBlock } from "./type";
 
 export const activitiesData: IBlock[] = [
   {
-    type: "banner",
+    type: "banner-fixed",
     title: "Hoạt động sự kiện",
     backgroundUrl:
       "https://dlsinc.com/storage/setting/1.V77F05e81dd6000098.jpg",
@@ -65,7 +65,7 @@ export const activitiesData: IBlock[] = [
     ],
   },
   {
-    type: "banner",
+    type: "banner-scroll",
     title: "Chính sách phúc lợi",
     backgroundUrl:
       "https://dlsinc.com/storage/setting/1.V77F05e81dd6000098.jpg",
