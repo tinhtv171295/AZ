@@ -5,6 +5,7 @@ import BlockContentThird from "../components/BlockContent/Third.block";
 import { IBlock } from "../mocks/type";
 import BlockContentFour from "../components/BlockContent/Four.block";
 import BlockContentFive from "../components/BlockContent/Five.block";
+import BlockContentSix from "../components/BlockContent/Six.block";
 
 export default function RenderLayout(block: IBlock) {
   switch (block.type) {
@@ -45,7 +46,9 @@ export default function RenderLayout(block: IBlock) {
         />
       );
     case "five":
-      return <BlockContentFive {...block} type={"five"} />;
+      return <BlockContentFive {...block} />;
+    case "six":
+      return <BlockContentSix {...block} />;
     default:
       return <React.Fragment>aaa</React.Fragment>;
   }

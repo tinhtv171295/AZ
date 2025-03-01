@@ -1,4 +1,4 @@
-export type BlockType = "main" | "second" | "third" | "four" | "five"; // F2 rename
+export type BlockType = "main" | "second" | "third" | "four" | "five" | "six"; // F2 rename
 
 export interface IBlock {
   title: string;

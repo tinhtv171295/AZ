@@ -105,7 +105,7 @@ export const homeData: IBlock[] = [
     title: "Dls làm gì?",
     titleBody: `Thành tựu`,
     linkDetail: "awards",
-    type: "main",
+    type: "six",
     backgroundUrl:
       "https://dlsinc.com/resource/template/frontend/default2/style/../image/bg-chievements.jpg",
     dataContent: [
