@@ -23,6 +23,10 @@ const Menus: IMenu[] = [
     ],
   },
   {
+    name: "Giá trị cốt lõi",
+    path: "corevalue",
+  },
+  {
     name: "Sản phẩm",
     path: "services",
   },
