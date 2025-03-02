@@ -9,6 +9,7 @@ type BlockContentType =
   | "block-eight"
   | "block-nine"
   | "block-ten"
-  | "block-eleven";
+  | "block-eleven"
+  | "block-twelve";
 
 export default BlockContentType;

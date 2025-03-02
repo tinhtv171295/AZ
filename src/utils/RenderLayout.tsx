@@ -18,6 +18,8 @@ import BlockNine from "../components/BlockContent/Nine.block";
 import BlockTen from "../components/BlockContent/Ten.block";
 import BlockEleven from "../components/BlockContent/Eleven.block";
 import CarouselServiceSwiper from "../components/Carousels/Service.swiper";
+import BlockTwelve from "../components/BlockContent/Twelve.block";
+import NoMarginBanner from "../components/Banners/NoMargin.banner";
 
 export default function RenderLayout(block: IBlock) {
   switch (block.type) {
@@ -25,6 +27,8 @@ export default function RenderLayout(block: IBlock) {
       return <FixedBanner {...block} />;
     case "banner-scroll":
       return <ScrollBanner {...block} />;
+    case "banner-no-margin":
+      return <NoMarginBanner {...block} />;
 
     case "block-first":
       return <BlockFirst {...block} />;
@@ -48,6 +52,9 @@ export default function RenderLayout(block: IBlock) {
       return <BlockTen {...block} />;
     case "block-eleven":
       return <BlockEleven {...block} />;
+    case "block-twelve":
+      return <BlockTwelve {...block} />;
+
     case "swiper-core-value":
       return <Carousel {...block} />;
     case "swiper-partner":

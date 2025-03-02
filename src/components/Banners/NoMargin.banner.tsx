@@ -2,7 +2,7 @@ import styled from "styled-components";
 import Button from "../UI/Button";
 import { IBlock } from "../../mocks/type";
 
-export default function ScrollBanner({
+export default function NoMarginBanner({
   title,
   titleBody,
   backgroundUrl,
@@ -37,7 +37,6 @@ const Stl = {
     justify-content: center;
     flex-direction: column;
     position: relative;
-    margin-bottom: 60px;
 
     &&::before {
       content: "";
