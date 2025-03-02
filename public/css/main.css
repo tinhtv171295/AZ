@@ -25,3 +25,7 @@ a {
     -moz-transition: color 0.3s ease;
     transition: color 0.3s ease;
 }
+
+img {
+    max-width: 100%;
+}

@@ -8,81 +8,96 @@ import { ContainerStl } from "../../Styles/Container";
 
 export default function CarouselMemberPartnerSwiper({ dataContent }: IBlock) {
   return (
-    <Stl.SwiperContainer>
-      <ContainerStl>
-        <Stl.Next className="next">
-          <RightIcon />
-        </Stl.Next>
-        <Stl.Perv className="prev">
-          <LeftIcon />
-        </Stl.Perv>
-        <Stl.Swiper
-          centeredSlides={true}
-          spaceBetween={10}
-          slidesPerView={3}
-          pagination={{
-            clickable: true,
-          }}
-          modules={[Pagination, Navigation]}
-          loop
-          navigation={{
-            nextEl: ".next",
-            prevEl: ".prev",
-          }}
-        >
-          {dataContent.map((slide, i) => (
-            <Stl.SwiperSlide key={i}>
-              <Stl.Card>
-                <img src={slide.image} />
-                <Stl.Body>
-                  <Stl.Title>{slide.title}</Stl.Title>
-                  <Stl.Desc>{slide.description}</Stl.Desc>
-                  {slide.content && (
-                    <Stl.BodyContent
-                      dangerouslySetInnerHTML={{
-                        __html: `${slide.content}`,
-                      }}
-                    />
-                  )}
-                </Stl.Body>
-              </Stl.Card>
-            </Stl.SwiperSlide>
-          ))}
-        </Stl.Swiper>
-      </ContainerStl>
-    </Stl.SwiperContainer>
+    <ContainerStl>
+      <Stl.Next className="next">
+        <RightIcon />
+      </Stl.Next>
+      <Stl.Perv className="prev">
+        <LeftIcon />
+      </Stl.Perv>
+      <Stl.Swiper
+        centeredSlides={true}
+        spaceBetween={10}
+        slidesPerView={1}
+        pagination={{
+          clickable: true,
+        }}
+        modules={[Pagination, Navigation]}
+        loop
+        navigation={{
+          nextEl: ".next",
+          prevEl: ".prev",
+        }}
+        breakpoints={{
+          768: {
+            slidesPerView: 3,
+          },
+        }}
+      >
+        {dataContent.map((slide, i) => (
+          <Stl.SwiperSlide key={i}>
+            <Stl.Card>
+              <img src={slide.image} />
+              <Stl.Body>
+                <Stl.Title>{slide.title}</Stl.Title>
+                <Stl.Desc>{slide.description}</Stl.Desc>
+                <Stl.Divider></Stl.Divider>
+                {slide.content && (
+                  <Stl.BodyContent
+                    dangerouslySetInnerHTML={{
+                      __html: `${slide.content}`,
+                    }}
+                  />
+                )}
+              </Stl.Body>
+            </Stl.Card>
+          </Stl.SwiperSlide>
+        ))}
+      </Stl.Swiper>
+    </ContainerStl>
   );
 }
 
 const Stl = {
-  SwiperContainer: styled.div`
-    height: 100%;
-    width: 100%;
-    margin: 50px 0;
-    position: relative;
-  `,
   Next: styled.div`
-    display: block;
-    width: 16px;
-    height: 16px;
-    color: gray;
+    display: none;
+    width: 45px;
+    height: 45px;
+    align-items: center;
+    justify-content: center;
     position: absolute;
+    top: 50%;
+    margin-top: -40px;
     right: -20px;
-    bottom: 50%;
-    cursor: pointer;
+    svg {
+      width: 10px;
+    }
+    @media (min-width: 992px) {
+      display: flex !important;
+    }
   `,
   Perv: styled.div`
+    display: none;
+    width: 45px;
+    height: 45px;
+    align-items: center;
+    justify-content: center;
     position: absolute;
-    width: 16px;
-    height: 16px;
-    color: gray;
-    position: absolute;
+    top: 50%;
+    margin-top: -40px;
     left: -20px;
-    bottom: 50%;
-    cursor: pointer;
+    svg {
+      width: 10px;
+    }
+    @media (min-width: 992px) {
+      display: flex !important;
+    }
   `,
   Swiper: styled(Swiper)`
-    padding-bottom: 50px;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding-bottom: 30px;
   `,
   SwiperSlide: styled(SwiperSlide)`
     display: flex;
@@ -95,38 +110,55 @@ const Stl = {
         img {
           max-height: 280px;
         }
-        > div > div {
-          max-height: none;
-          -webkit-line-clamp: initial;
+        > div {
+          > div {
+            &:first-child {
+              font-size: 24px;
+              font-weight: 700;
+            }
+            &:nth-child(2) {
+              font-size: 18px;
+            }
+            &:last-child {
+              max-height: none;
+              -webkit-line-clamp: initial;
+            }
+            max-height: none;
+            -webkit-line-clamp: initial;
+          }
         }
       }
     }
   `,
   Card: styled.div`
+    width: 90%;
     box-shadow: inset 0 0 1px 1px #d0d0d0;
+    background: #fff;
     border-radius: 16px;
     overflow: hidden;
-    width: 90%;
     img {
       width: 100%;
-      height: 100%;
       max-height: 220px;
       object-fit: cover;
       object-position: top;
     }
   `,
   Body: styled.div`
-    padding: 20px;
+    padding: 8px 24px 24px;
     line-height: 1.5;
   `,
   Title: styled.div`
-    font-size: 24px;
+    font-size: 20px;
     font-weight: 700;
-    margin: 5px 0;
+  `,
+  Divider: styled.div`
+    margin: 10px 0;
+    width: 80px;
+    height: 4px;
+    background-color: #428dff;
   `,
   Desc: styled.div`
-    font-size: 18px;
-    margin: 10px 0;
+    font-size: 16px;
   `,
   BodyContent: styled.div`
     max-height: 268px;

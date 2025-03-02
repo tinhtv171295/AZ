@@ -16,14 +16,21 @@ export default function CarouselPartnerSwiper({
       <Stl.SwiperContainer>
         <Stl.Swiper
           spaceBetween={10}
-          slidesPerView={4}
+          slidesPerView={2}
           grid={{ rows: 2, fill: "row" }}
           modules={[Grid, Pagination]}
-          loop
+          breakpoints={{
+            768: {
+              slidesPerView: 4,
+              grid: { rows: 2, fill: "row" },
+            },
+          }}
         >
           {dataContent.map((slide, i) => (
             <Stl.SwiperSlide key={i}>
-              <img src={slide.image} />
+              <a>
+                <img src={slide.image} alt={slide.title} />
+              </a>
             </Stl.SwiperSlide>
           ))}
         </Stl.Swiper>
@@ -34,10 +41,26 @@ export default function CarouselPartnerSwiper({
 
 const Stl = {
   SwiperContainer: styled.div`
-    height: 100%;
-    width: 100%;
-    margin: 50px 0;
+    position: relative;
   `,
-  Swiper: styled(Swiper)``,
-  SwiperSlide: styled(SwiperSlide)``,
+  Swiper: styled(Swiper)`
+    width: 100%;
+    height: 100%;
+    padding-bottom: 30px;
+  `,
+  SwiperSlide: styled(SwiperSlide)`
+    background: #fff;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    a {
+      display: block;
+      text-align: center;
+      font-size: 0;
+      img {
+        max-height: 80px;
+      }
+    }
+  `,
 };
