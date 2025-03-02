@@ -1,7 +1,6 @@
 import React from "react";
 import BlockContentSecond from "../components/BlockContentOld/Second.block";
 import { IBlock } from "../mocks/type";
-import BlockContentEight from "../components/BlockContentOld/Eight.block";
 import FixedBanner from "../components/Banners/Fixed.banner";
 import ScrollBanner from "../components/Banners/Scroll.banner";
 import BlockFirst from "../components/BlockContent/First.block";
@@ -14,6 +13,7 @@ import Carousel from "../components/Carousels/Swiper";
 import CarouselPartnerSwiper from "../components/Carousels/Partner.swiper";
 import CarouselMemberPartnerSwiper from "../components/Carousels/MemberPartner.swiper";
 import CarouselHomeSwiper from "../components/Carousels/HomeCarousel.swiper";
+import BlockEight from "../components/BlockContent/Eight.block";
 
 export default function RenderLayout(block: IBlock) {
   switch (block.type) {
@@ -37,7 +37,7 @@ export default function RenderLayout(block: IBlock) {
     case "block-seven":
       return <BlockSeven {...block} />;
     case "block-eight":
-      return <BlockContentEight {...block} />;
+      return <BlockEight {...block} />;
     case "swiper-core-value":
       return <Carousel {...block} />;
     case "swiper-partner":
