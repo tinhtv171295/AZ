@@ -6,6 +6,7 @@ type BlockContentType =
   | "block-five"
   | "block-six"
   | "block-seven"
-  | "block-eight";
+  | "block-eight"
+  | "block-contact";
 
 export default BlockContentType;

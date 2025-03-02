@@ -1,14 +1,24 @@
-import PageBanner from "../components/Banners/Fixed.banner";
 import BodyLayout from "../layouts/Body.layout";
+import { useEffect, useState } from "react";
+import React from "react";
+import { IBlock } from "../mocks/type";
+import RenderLayout from "../utils/RenderLayout";
+import { useParams } from "react-router-dom";
+import { contactData } from "../mocks/contact.data";
 
-export default function ContactPage() {
+export default function AboutPage() {
+  const { slug } = useParams();
+  const [data, setData] = useState<IBlock[]>([]);
+
+  useEffect(() => {
+    setData(contactData);
+  }, [slug]);
+
   return (
     <BodyLayout>
-      <PageBanner
-        title="Vị trí"
-        content="Liên hệ chúng tôi"
-        image={"https://dlsinc.com/storage/setting/1.7Q99Y5e81dd693d034.jpg"}
-      />
+      {data.map((block, i) => {
+        return <React.Fragment key={i}>{RenderLayout(block)}</React.Fragment>;
+      })}
     </BodyLayout>
   );
 }
