@@ -372,6 +372,84 @@ const blockData: IBlock[] = [
       },
     ],
   },
+  {
+    type: "block-nine",
+    title: "",
+    dataContent: [
+      {
+        title: "Thanh Hoa",
+        description: "Headquarter",
+        content:
+          "6th floor, No.99 Cao Son, An Hung Ward, Thanh Hoa city, Vietnam",
+        image:
+          "pb=!1m18!1m12!1m3!1d3753.8654187716256!2d105.74942737527968!3d19.803302681556843!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3136f8247d346673%3A0x1ce1a3cdda0b49d!2zOTkgQ2FvIFPGoW4sIFRULiBOaOG7k2ksIFRoYW5oIEjDs2EsIDAyMzczLCBWaeG7h3QgTmFt!5e0!3m2!1svi!2s!4v1740909514151!5m2!1svi!2s",
+      },
+      {
+        title: "Ha Noi",
+        description: "Branch",
+        content:
+          "7th floor, Hanoi Centerpoint Building, No. 27 Le Van Luong, Nhan Chinh, Thanh Xuan, Hanoi, Vietnam",
+        image:
+          "pb=!1m18!1m12!1m3!1d3724.6981219147046!2d105.80214657531127!3d21.00473468063853!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135aca21475583f%3A0x563cef764d474c9e!2zMjcgxJAuIEzDqiBWxINuIEzGsMahbmcsIE5ow6JuIENow61uaCwgVGhhbmggWHXDom4sIEjDoCBO4buZaSAxMDAwMDAsIFZp4buHdCBOYW0!5e0!3m2!1svi!2s!4v1740909689001!5m2!1svi!2s",
+      },
+    ],
+  },
+  {
+    type: "block-ten",
+    title: "",
+    dataContent: [
+      {
+        title: "Cuộc sống ở Dls",
+        image:
+          "https://dlsinc.com/storage/culture/group/10.12.2024/group.6.QOCVC675815b62f990.jpg",
+      },
+      {
+        title: "Kỉ niệm các ngày lễ trong năm",
+        image:
+          "https://dlsinc.com/storage/culture/group/10.12.2024/group.6.AJ6YS67581495e24c4.png",
+      },
+      {
+        title: "DLS Clubs",
+        image:
+          "https://dlsinc.com/storage/culture/group/10.12.2024/group.6.7TUH5675813ef80420.jpg",
+      },
+      {
+        title: "Happy Birthday DLS",
+        image:
+          "https://dlsinc.com/storage/culture/group/10.12.2024/group.6.8P9EM6758132ae93ca.jpg",
+      },
+      {
+        title: "DLS Training",
+        image:
+          "https://dlsinc.com/storage/culture/group/10.12.2024/group.6.3G2UA67581251a9167.jpg",
+      },
+      {
+        title: "DLS's Adventure",
+        image:
+          "https://dlsinc.com/storage/culture/group/07.12.2024/group.6.N3P3E67542f8fab7a0.jpg",
+      },
+      {
+        title: "Ngày Gia đình DLS: Gửi yêu thương về nhà",
+        image:
+          "https://dlsinc.com/storage/culture/group/07.12.2024/group.6.XMNHC67542dcdaeb61.jpg",
+      },
+      {
+        title: "DLS vì cộng đồng",
+        image:
+          "https://dlsinc.com/storage/culture/group/07.12.2024/group.6.ODVGY67542ede23a05.jpg",
+      },
+      {
+        title: "Sát Cánh",
+        image:
+          "https://dlsinc.com/storage/culture/group/25.11.2024/group.7.VI4GW674442256efd8.jpg",
+      },
+      {
+        title: "Year End Party",
+        image:
+          "https://dlsinc.com/storage/culture/group/07.12.2024/group.6.ZQMMF6754316396a6c.jpg",
+      },
+    ],
+  },
 ];
 
 export default blockData;
