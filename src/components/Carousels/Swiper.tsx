@@ -1,13 +1,10 @@
 import styled from "styled-components";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { IBlockContent } from "../../mocks/type";
+import { IBlock } from "../../mocks/type";
 import { useEffect, useState } from "react";
+import { ContainerStl } from "../../Styles/Container";
 
-type Props = {
-  slides: IBlockContent[];
-};
-
-export default function Carousel({ slides }: Props) {
+export default function Carousel({ dataContent, title }: IBlock) {
   const [selected, setSelected] = useState(0);
 
   const handleChangeId = (id: number) => {
@@ -15,7 +12,7 @@ export default function Carousel({ slides }: Props) {
   };
 
   const refresh = () => {
-    const first = slides[0];
+    const first = dataContent[0];
     if (first) {
       setSelected(0);
     }
@@ -24,10 +21,11 @@ export default function Carousel({ slides }: Props) {
   useEffect(() => {
     refresh();
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [slides]);
+  }, [dataContent]);
 
   return (
-    <Stl.Container>
+    <ContainerStl>
+      <Stl.TitleTop dangerouslySetInnerHTML={{ __html: title }}></Stl.TitleTop>
       <Stl.SwiperContainer>
         <Swiper
           spaceBetween={10}
@@ -35,7 +33,7 @@ export default function Carousel({ slides }: Props) {
           loop
           autoplay={{ delay: 3000 }}
         >
-          {slides.map((slide, i) => (
+          {dataContent.map((slide, i) => (
             <SwiperSlide key={i}>
               <Stl.Slide onClick={() => handleChangeId(i)}>
                 <Stl.SlideImage>
@@ -49,19 +47,23 @@ export default function Carousel({ slides }: Props) {
       </Stl.SwiperContainer>
 
       <Stl.Content>
-        <Stl.Title>{slides[selected]?.title}</Stl.Title>
-        <Stl.Description>{slides[selected]?.description}</Stl.Description>
+        <Stl.Title>{dataContent[selected]?.title}</Stl.Title>
+        <Stl.Description>{dataContent[selected]?.description}</Stl.Description>
       </Stl.Content>
-    </Stl.Container>
+    </ContainerStl>
   );
 }
 
 const Stl = {
-  Container: styled.div``,
   SwiperContainer: styled.div`
     height: 100%;
     width: 100%;
     margin: 50px 0;
+  `,
+  TitleTop: styled.div`
+    max-width: 550px;
+    margin: 0 auto 40px;
+    text-align: center;
   `,
   Slide: styled.div``,
   SlideImage: styled.div`

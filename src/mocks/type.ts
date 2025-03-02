@@ -19,6 +19,7 @@ export interface IBlockContent {
   icon?: string;
   title: string;
   description?: string;
+  content?: string;
   image?: string;
   linkDetail?: string;
 }

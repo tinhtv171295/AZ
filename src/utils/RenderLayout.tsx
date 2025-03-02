@@ -10,6 +10,9 @@ import BlockFour from "../components/BlockContent/Four.block";
 import BlockFive from "../components/BlockContent/Five.block";
 import BlockSix from "../components/BlockContent/Six.block";
 import BlockSeven from "../components/BlockContent/Seven.block";
+import Carousel from "../components/Carousels/Swiper";
+import CauroselPartnerSwiper from "../components/Carousels/Partner.swiper";
+import CarouselMemberPartnerSwiper from "../components/Carousels/MemberPartner.swiper";
 
 export default function RenderLayout(block: IBlock) {
   switch (block.type) {
@@ -34,6 +37,12 @@ export default function RenderLayout(block: IBlock) {
       return <BlockSeven {...block} />;
     case "block-eight":
       return <BlockContentEight {...block} />;
+    case "swiper-corevalue":
+      return <Carousel {...block} />;
+    case "swiper-partner":
+      return <CauroselPartnerSwiper {...block} />;
+    case "swiper-memberpartner":
+      return <CarouselMemberPartnerSwiper {...block} />;
     default:
       return <React.Fragment>aaa</React.Fragment>;
   }

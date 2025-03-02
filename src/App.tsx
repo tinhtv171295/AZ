@@ -8,6 +8,7 @@ import ContactPage from "./pages/Contact.page";
 import ServicesPage from "./pages/Services.page";
 import BannerPage from "./pages/Template/BannerPage";
 import BlockContentPage from "./pages/Template/BlockContentPage";
+import CauroselPage from "./pages/Template/Carousel.page";
 
 export default function App() {
   return (
@@ -41,6 +42,7 @@ export default function App() {
           <Route path="templates/*">
             <Route path="banner" element={<BannerPage />} />
             <Route path="block" element={<BlockContentPage />} />
+            <Route path="carousel" element={<CauroselPage />} />
           </Route>
 
           <Route path="*" element={<HomePage />} />
