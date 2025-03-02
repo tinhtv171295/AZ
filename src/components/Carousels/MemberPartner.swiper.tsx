@@ -5,10 +5,16 @@ import { Pagination, Navigation } from "swiper/modules";
 import LeftIcon from "../UI/Icons/Left";
 import RightIcon from "../UI/Icons/Right";
 import { ContainerStl } from "../../Styles/Container";
+import TitleSecond from "../Titles/Second.title";
 
-export default function CarouselMemberPartnerSwiper({ dataContent }: IBlock) {
+export default function CarouselMemberPartnerSwiper({
+  dataContent,
+  title,
+  titleBody,
+}: IBlock) {
   return (
     <ContainerStl>
+      {title !== "" && <TitleSecond title={title} titleBody={titleBody} />}
       <Stl.Next className="next">
         <RightIcon />
       </Stl.Next>

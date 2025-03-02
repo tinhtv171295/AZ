@@ -83,7 +83,8 @@ export const carouselData: IBlock[] = [
     ],
   },
   {
-    title: "",
+    title: "Our Partners",
+    titleBody: "DLS Partners",
     type: "swiper-member-partner",
     dataContent: [
       {
