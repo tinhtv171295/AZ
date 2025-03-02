@@ -35,7 +35,10 @@ export default function Carousel({ dataContent, title }: IBlock) {
         >
           {dataContent.map((slide, i) => (
             <SwiperSlide key={i}>
-              <Stl.Slide onClick={() => handleChangeId(i)}>
+              <Stl.Slide
+                className={selected === i ? "active" : ""}
+                onClick={() => handleChangeId(i)}
+              >
                 <Stl.SlideImage>
                   <img src={slide.image} />
                 </Stl.SlideImage>
@@ -65,19 +68,68 @@ const Stl = {
     margin: 0 auto 40px;
     text-align: center;
   `,
-  Slide: styled.div``,
-  SlideImage: styled.div`
-    border-radius: 15px;
+  Slide: styled.div`
+    width: 255px;
+    margin-right: 30px;
+    cursor: pointer;
+    &:hover > strong {
+      letter-spacing: 0.5em;
+      width: 100%;
+      text-align: center;
+    }
+    &.active {
+      a {
+        &::after {
+          opacity: 0;
+        }
+      }
+      strong {
+        opacity: 0;
+      }
+    }
   `,
-  OverlayText: styled.div`
-    color: #fff;
-    background: rgba(0, 0, 0, 0.6);
+  SlideImage: styled.a`
+    border-radius: 15px;
+    display: block;
+    position: relative;
+    overflow: hidden;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    background-clip: padding-box;
+    &::after {
+      content: "";
+      background: rgba(0, 0, 0, 0.6);
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      -webkit-transition: all 0.3s ease;
+      -moz-transition: all 0.3s ease;
+      transition: all 0.3s ease;
+    }
+    img {
+      display: block;
+    }
+  `,
+  OverlayText: styled.strong`
+    width: 100%;
+    text-align: center;
     position: absolute;
-    left: 0;
+    left: 50%;
     top: 50%;
-    -webkit-transition: all 0.3sease;
+    color: #fff;
+    font-size: 20px;
+    z-index: 1;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    font-family: "ProximaNova-Bold", sans-serif;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    -webkit-transition: all 0.3s ease;
     -moz-transition: all 0.3s ease;
-    transition: all 0.3sease;
+    transition: all 0.3s ease;
   `,
   Content: styled.div`
     margin-top: 20px;

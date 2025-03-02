@@ -13,6 +13,7 @@ import BlockSeven from "../components/BlockContent/Seven.block";
 import Carousel from "../components/Carousels/Swiper";
 import CarouselPartnerSwiper from "../components/Carousels/Partner.swiper";
 import CarouselMemberPartnerSwiper from "../components/Carousels/MemberPartner.swiper";
+import CarouselHomeSwiper from "../components/Carousels/HomeCarousel.swiper";
 
 export default function RenderLayout(block: IBlock) {
   switch (block.type) {
@@ -43,6 +44,8 @@ export default function RenderLayout(block: IBlock) {
       return <CarouselPartnerSwiper {...block} />;
     case "swiper-member-partner":
       return <CarouselMemberPartnerSwiper {...block} />;
+    case "swiper-home":
+      return <CarouselHomeSwiper {...block} />;
     default:
       return <React.Fragment>aaa</React.Fragment>;
   }
