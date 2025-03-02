@@ -2,7 +2,11 @@ import styled from "styled-components";
 import Button from "../UI/Button";
 import { IBlock } from "../../mocks/type";
 
-export default function FixedBanner({ title, content, backgroundUrl }: IBlock) {
+export default function FixedBanner({
+  title,
+  titleBody,
+  backgroundUrl,
+}: IBlock) {
   return (
     <Stl.Wrap $backgroundUrl={backgroundUrl}>
       <Stl.Content>
@@ -11,7 +15,7 @@ export default function FixedBanner({ title, content, backgroundUrl }: IBlock) {
             {title}
           </Button>
         </Stl.Button>
-        {content && <Stl.Content>{content}</Stl.Content>}
+        <Stl.TitleBody>{titleBody}</Stl.TitleBody>
       </Stl.Content>
     </Stl.Wrap>
   );
@@ -58,5 +62,15 @@ const Stl = {
     font-size: 40px;
     font-weight: 400;
     margin: 0 0 10px;
+  `,
+  TitleBody: styled.h2`
+    margin: 0 0 10px;
+    font-size: 30px;
+    font-weight: 400;
+
+    @media (min-width: 768px) {
+      font-size: 40px;
+      font-weight: 400;
+    }
   `,
 };

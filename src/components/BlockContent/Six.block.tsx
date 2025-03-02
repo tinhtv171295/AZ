@@ -3,11 +3,31 @@ import { IBlock } from "../../mocks/type";
 import { ContainerStl } from "../../Styles/Container";
 import TitleThird from "../Titles/Third.title";
 
-export default function BlockSix({ type, title, backgroundColor }: IBlock) {
+export default function BlockSix({
+  type,
+  title,
+  backgroundColor,
+  dataContent,
+}: IBlock) {
   return (
     <Stl.Wrap data-component={type} $backgroundColor={backgroundColor}>
       <ContainerStl>
-        <TitleThird title={title} />
+        <Stl.Header>
+          <TitleThird title={title} />
+        </Stl.Header>
+        <Stl.Desktop>
+          {dataContent.map((item, i) => (
+            <Stl.BlockBoss key={i}>
+              <Stl.Item>
+                <Stl.Thumb>
+                  <img src={item.image} alt={item.title} />
+                </Stl.Thumb>
+                <Stl.Name>{item.title}</Stl.Name>
+                <Stl.Position>{item.description}</Stl.Position>
+              </Stl.Item>
+            </Stl.BlockBoss>
+          ))}
+        </Stl.Desktop>
       </ContainerStl>
     </Stl.Wrap>
   );
@@ -26,80 +46,54 @@ const Stl = {
       `
         : `${$backgroundColor ? `background: ${$backgroundColor};` : ""}`}
   `,
-  Row: styled.div`
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
-    margin-right: -15px;
-    margin-left: -15px;
+  Header: styled.div`
+    margin: 0 0 20px;
   `,
-  Left: styled.div`
-    position: relative;
-    width: 100%;
-    padding-right: 15px;
-    padding-left: 15px;
-    @media (min-width: 768px) {
-      -ms-flex: 0 0 41.666667%;
-      flex: 0 0 41.666667%;
-      max-width: 41.666667%;
-    }
-
-    img {
-      max-width: 100%;
-      border-radius: 10px;
-      object-fit: cover;
-    }
+  Desktop: styled.div`
+    text-align: center;
   `,
-  Right: styled.div`
-    position: relative;
-    width: 100%;
-    padding-right: 15px;
-    padding-left: 15px;
+  BlockBoss: styled.div`
+    width: 96%;
+    display: inline-block;
+    margin-left: 5px;
+    margin-right: 5px;
     @media (min-width: 768px) {
-      -ms-flex: 0 0 50%;
-      flex: 0 0 50%;
-      max-width: 50%;
+      width: 46%;
     }
 
     @media (min-width: 992px) {
-      margin-left: 8.333333%;
+      width: 23%;
     }
   `,
-  Title: styled.h3`
-    font-size: 16px;
-    text-transform: uppercase;
-    margin: 0 0 20px;
-
-    @media (min-width: 768px) {
-      margin-bottom: 50px;
-    }
+  Item: styled.div`
+    margin-bottom: 25px;
   `,
-  TitleBody: styled.span`
-    display: inline-block;
-    padding: 0 0 0 10px;
+  Thumb: styled.div`
+    margin: 0 0 10px;
+    font-size: 0;
     position: relative;
-    font-weight: 400;
-    font-size: 33px;
-    &&::after {
-      content: "";
-      background: var(--color-primary);
-      display: block;
-      width: 3px;
-      height: 25px;
+    img {
+      width: 100%;
       position: absolute;
       left: 0;
       top: 0;
-      max-height: 25px;
+      object-fit: cover;
       height: 100%;
+      -webkit-border-radius: 10px;
+      border-radius: 10px;
+      background-clip: padding-box;
+    }
+    &::before {
+      content: "";
+      display: block;
+      padding-top: 122.2222222222%;
     }
   `,
-  Image: styled.div`
-    margin: 20px 0;
+  Name: styled.h4`
+    margin: 0 0 10px;
   `,
-  BodyContent: styled.div`
-    font-size: 16px;
-    line-height: 22px;
-    text-align: justify;
+  Position: styled.div`
+    margin: 0;
+    color: #828282;
   `,
 };

@@ -4,7 +4,7 @@ import { IBlock } from "../../mocks/type";
 
 export default function ScrollBanner({
   title,
-  content,
+  titleBody,
   backgroundUrl,
 }: IBlock) {
   return (
@@ -15,7 +15,7 @@ export default function ScrollBanner({
             {title}
           </Button>
         </Stl.Button>
-        {content && <Stl.Content>{content}</Stl.Content>}
+        <Stl.TitleBody>{titleBody}</Stl.TitleBody>
       </Stl.Content>
     </Stl.Wrap>
   );
@@ -62,5 +62,15 @@ const Stl = {
     font-size: 40px;
     font-weight: 400;
     margin: 0 0 10px;
+  `,
+  TitleBody: styled.h2`
+    margin: 0 0 10px;
+    font-size: 30px;
+    font-weight: 400;
+
+    @media (min-width: 768px) {
+      font-size: 40px;
+      font-weight: 400;
+    }
   `,
 };
