@@ -35,6 +35,24 @@ const Menus: IMenu[] = [
     name: "Liên hệ",
     path: "contact",
   },
+  {
+    name: "Template",
+    path: "templates",
+    menu: [
+      {
+        name: "Banner",
+        path: "templates/banner",
+      },
+      {
+        name: "Block",
+        path: "templates/block",
+      },
+      {
+        name: "Carousel",
+        path: "templates/carousel",
+      },
+    ],
+  },
 ];
 
 export default Menus;

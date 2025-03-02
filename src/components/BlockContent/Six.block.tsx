@@ -1,97 +1,105 @@
-import styled from "styled-components";
-import BlockHeader from "./BlockHeader";
-import { ContainerStl } from "../../Styles/Container";
+import { styled } from "styled-components";
 import { IBlock } from "../../mocks/type";
-import Row from "../../Styles/Row";
+import { ContainerStl } from "../../Styles/Container";
+import TitleThird from "../Titles/Third.title";
 
-export default function BlockContentSix({
-  title,
-  titleBody,
-  linkDetail,
-  backgroundUrl,
-  dataContent,
-}: IBlock) {
+export default function BlockSix({ type, title, backgroundColor }: IBlock) {
   return (
-    <Stl.Wrap $backgroundUrl={backgroundUrl}>
+    <Stl.Wrap data-component={type} $backgroundColor={backgroundColor}>
       <ContainerStl>
-        <BlockHeader
-          title={title}
-          titleBody={titleBody}
-          linkDetail={linkDetail}
-          content={undefined}
-        />
-        <Stl.Body>
-          <Stl.Content>
-            <Row>
-              {dataContent.map((item, i) => (
-                <Stl.WrapItem key={i}>
-                  <Stl.Item>
-                    <Stl.NumberCount>
-                      <span>{item.title}</span>
-                    </Stl.NumberCount>
-                    <Stl.Description>{item.description}</Stl.Description>
-                  </Stl.Item>
-                </Stl.WrapItem>
-              ))}
-            </Row>
-          </Stl.Content>
-        </Stl.Body>
+        <TitleThird title={title} />
       </ContainerStl>
     </Stl.Wrap>
   );
 }
 
 const Stl = {
-  Wrap: styled.div<{ $backgroundUrl?: string }>`
+  Wrap: styled.div<{ $backgroundUrl?: string; $backgroundColor?: string }>`
     padding: 60px 0;
-    ${({ $backgroundUrl }) =>
+    ${({ $backgroundUrl, $backgroundColor }) =>
       $backgroundUrl !== undefined
         ? `
             background: url(${$backgroundUrl}) no-repeat 50% 50% fixed;
             background-size: cover;
-            color: #fff;
+            color: ${$backgroundColor ? $backgroundColor : "#fff"};
             min-height: 600px;
       `
-        : ""}
+        : `${$backgroundColor ? `background: ${$backgroundColor};` : ""}`}
   `,
-  Body: styled.div`
-    display: block;
+  Row: styled.div`
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
   `,
-  Content: styled.div`
-    @media (min-width: 992px) {
-      padding: 100px 0 0;
-    }
-  `,
-  WrapItem: styled.div`
-    margin-bottom: 30px;
+  Left: styled.div`
     position: relative;
     width: 100%;
     padding-right: 15px;
     padding-left: 15px;
+    @media (min-width: 768px) {
+      -ms-flex: 0 0 41.666667%;
+      flex: 0 0 41.666667%;
+      max-width: 41.666667%;
+    }
 
-    @media (min-width: 992px) {
-      flex: 0 0 25%;
-      max-width: 25%;
+    img {
+      max-width: 100%;
+      border-radius: 10px;
+      object-fit: cover;
     }
   `,
-  Item: styled.div`
-    border: solid 1px #fff;
-    height: 125px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    -webkit-border-radius: 10px;
-    border-radius: 10px;
-    background-clip: padding-box;
+  Right: styled.div`
+    position: relative;
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    @media (min-width: 768px) {
+      -ms-flex: 0 0 50%;
+      flex: 0 0 50%;
+      max-width: 50%;
+    }
+
+    @media (min-width: 992px) {
+      margin-left: 8.333333%;
+    }
   `,
-  NumberCount: styled.strong`
-    color: #428dff;
-    font-size: 40px;
-  `,
-  Description: styled.h5`
+  Title: styled.h3`
     font-size: 16px;
-    margin: 0;
+    text-transform: uppercase;
+    margin: 0 0 20px;
+
+    @media (min-width: 768px) {
+      margin-bottom: 50px;
+    }
+  `,
+  TitleBody: styled.span`
+    display: inline-block;
+    padding: 0 0 0 10px;
+    position: relative;
     font-weight: 400;
+    font-size: 33px;
+    &&::after {
+      content: "";
+      background: var(--color-primary);
+      display: block;
+      width: 3px;
+      height: 25px;
+      position: absolute;
+      left: 0;
+      top: 0;
+      max-height: 25px;
+      height: 100%;
+    }
+  `,
+  Image: styled.div`
+    margin: 20px 0;
+  `,
+  BodyContent: styled.div`
+    font-size: 16px;
+    line-height: 22px;
+    text-align: justify;
   `,
 };

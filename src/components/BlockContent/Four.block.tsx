@@ -1,90 +1,106 @@
-import styled from "styled-components";
+import { styled } from "styled-components";
+import { IBlock } from "../../mocks/type";
 import { ContainerStl } from "../../Styles/Container";
-import { BlockContentType } from "./type";
+import TitleSecond from "../Titles/Second.title";
+import { RowLayout } from "../../Styles/Row";
+import SeeMore from "../../Styles/SeeMore";
 
-export default function BlockContentFour({
+export default function BlockFour({
+  type,
   title,
-  content,
+  titleBody,
   backgroundUrl,
-}: BlockContentType) {
+  backgroundColor,
+  dataContent,
+  linkDetail,
+}: IBlock) {
   return (
-    <Stl.Wrap>
+    <Stl.Wrap
+      data-component={type}
+      $backgroundUrl={backgroundUrl}
+      $backgroundColor={backgroundColor}
+    >
       <ContainerStl>
-        <Stl.Row>
-          <Stl.Left>
-            <Stl.Title>
-              <Stl.TitleBody>{title}</Stl.TitleBody>
-              <Stl.Image>
-                <img src={backgroundUrl} alt={title} />
-              </Stl.Image>
-            </Stl.Title>
-          </Stl.Left>
-          <Stl.Right>
-            {content && (
-              <Stl.BodyContent
-                dangerouslySetInnerHTML={{
-                  __html: `${content}`,
-                }}
-              />
-            )}
-          </Stl.Right>
-        </Stl.Row>
+        <TitleSecond
+          title={title}
+          titleBody={titleBody}
+          linkDetail={linkDetail}
+        />
+        <Stl.WrapItem>
+          <RowLayout
+            col={1}
+            sm={1}
+            md={2}
+            lg={2}
+            margin={[0, 0, 30, 0]}
+            marginMd={[0, 0, 30, 0]}
+          >
+            {dataContent.map((item, i) => (
+              <Stl.Item key={i}>
+                <Stl.ItemThumb>
+                  <a href={item.linkDetail}>
+                    <img src={item.image} alt={item.title} />
+                  </a>
+                </Stl.ItemThumb>
+                <Stl.ItemTitle>{item.title}</Stl.ItemTitle>
+                <Stl.ItemSummary>{item.description}</Stl.ItemSummary>
+                {item.linkDetail && <SeeMore url={item.linkDetail} />}
+              </Stl.Item>
+            ))}
+          </RowLayout>
+        </Stl.WrapItem>
       </ContainerStl>
     </Stl.Wrap>
   );
 }
 
 const Stl = {
-  Wrap: styled.div`
+  Wrap: styled.div<{ $backgroundUrl?: string; $backgroundColor?: string }>`
     padding: 60px 0;
+    ${({ $backgroundUrl, $backgroundColor }) =>
+      $backgroundUrl !== undefined
+        ? `
+            background: url(${$backgroundUrl}) no-repeat 50% 50% fixed;
+            background-size: cover;
+            color: ${$backgroundColor ? $backgroundColor : "#fff"};
+            min-height: 600px;
+      `
+        : `${$backgroundColor ? `background: ${$backgroundColor};` : ""}`}
   `,
-  Row: styled.div`
+  WrapItem: styled.div``,
+  Item: styled.div`
+    background: #fff;
+    height: 100%;
     display: flex;
-    justify-content: space-between;
-  `,
-  Left: styled.div`
-    flex: 0 0 50%;
-    max-width: calc(100% / 12 * 5);
-  `,
-  Right: styled.div`
-    flex: 0 0 50%;
-    width: calc(100% / 12 * 6);
-  `,
-  Title: styled.h3`
-    font-size: 16px;
-    text-transform: uppercase;
-    margin: 0 0 15px;
-  `,
-  TitleBody: styled.span`
-    display: inline-block;
-    padding: 0 0 0 10px;
-    position: relative;
-    font-weight: 400;
-    font-size: 33px;
-    &&::after {
-      content: "";
-      background: var(--color-primary);
-      display: block;
-      width: 3px;
-      height: 25px;
-      position: absolute;
-      left: 0;
-      top: 0;
-      max-height: 25px;
-      height: 100%;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px;
+    min-height: 330px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    background-clip: padding-box;
+
+    @media (min-width: 992px) {
+      padding: 20px 60px;
     }
   `,
-  Image: styled.div`
-    margin: 20px 0;
-    img {
-      width: 445px;
-      height: 330px;
-      border-radius: 10px;
+  ItemThumb: styled.div`
+    display: flex;
+    justify-content: center;
+    margin: 0 0 20px;
+    a > img {
+      max-width: 100%;
     }
   `,
-  BodyContent: styled.div`
-    font-size: 16px;
-    line-height: 22px;
-    text-align: justify;
+  ItemTitle: styled.h3`
+    margin: 0 0 10px;
+    font-size: 18px;
+    font-weight: bold;
+  `,
+  ItemSummary: styled.p`
+    margin: 0 0 25px;
+    font-size: 14px;
+    color: #828282;
+    line-height: 18px;
   `,
 };

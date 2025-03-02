@@ -1,15 +1,14 @@
 import styled from "styled-components";
 import Button from "../UI/Button";
+import { IBlock } from "../../mocks/type";
 
-type Props = {
-  title: string;
-  content?: string;
-  image: string;
-};
-
-export default function PageBannerScroll({ title, content, image }: Props) {
+export default function ScrollBanner({
+  title,
+  content,
+  backgroundUrl,
+}: IBlock) {
   return (
-    <Stl.Wrap $backgroundUrl={image}>
+    <Stl.Wrap $backgroundUrl={backgroundUrl}>
       <Stl.Content>
         <Stl.Button>
           <Button appearance="dark" href="#" transparent>
@@ -23,8 +22,9 @@ export default function PageBannerScroll({ title, content, image }: Props) {
 }
 
 const Stl = {
-  Wrap: styled.div<{ $backgroundUrl: string }>`
-    background-image: url(${({ $backgroundUrl }) => $backgroundUrl});
+  Wrap: styled.div<{ $backgroundUrl?: string }>`
+    background: ${({ $backgroundUrl }) =>
+      $backgroundUrl !== undefined ? `url(${$backgroundUrl})` : "#fff"};
     background-position: 50% 0%;
     background-repeat: no-repeat;
     background-attachment: scroll;

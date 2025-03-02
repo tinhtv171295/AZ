@@ -1,18 +1,18 @@
-import PageBanner from "../components/Banners/PageBanner";
+import PageBanner from "../components/Banners/Fixed.banner";
 import BodyLayout from "../layouts/Body.layout";
 import { useEffect, useState } from "react";
-import { corevalueData, slides } from "../mocks/corevalue.data";
+import { coreValueData, slides } from "../mocks/corevalue.data";
 import React from "react";
 import { IBlock } from "../mocks/type";
 import RenderLayout from "../utils/RenderLayout";
-import Carousel from "../components/Carousel/Swiper";
+import Carousel from "../components/Carousels/Swiper";
 import { ContainerStl } from "../Styles/Container";
 
 export default function AboutPage() {
   const [data, setData] = useState<IBlock[]>([]);
 
   useEffect(() => {
-    setData(corevalueData);
+    setData(coreValueData);
   }, []);
 
   return (

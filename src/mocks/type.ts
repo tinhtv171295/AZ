@@ -1,14 +1,8 @@
-export type BlockType =
-  | "banner-fixed"
-  | "banner-scroll"
-  | "main"
-  | "second"
-  | "third"
-  | "four"
-  | "five"
-  | "six"
-  | "seven"
-  | "eight"; // F2 rename
+import BannerType from "../components/Banners/banner.type";
+import BlockContentType from "../components/BlockContentOld/block.type";
+import CarouselType from "../components/Carousels/carousel.type";
+
+export type BlockType = BannerType | CarouselType | BlockContentType;
 
 export interface IBlock {
   title: string;

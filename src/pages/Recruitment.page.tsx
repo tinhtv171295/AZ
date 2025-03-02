@@ -1,4 +1,4 @@
-import PageBanner from "../components/Banners/PageBanner";
+import PageBanner from "../components/Banners/Fixed.banner";
 import BodyLayout from "../layouts/Body.layout";
 
 export default function RecruitmentPage() {

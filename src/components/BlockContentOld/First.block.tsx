@@ -1,15 +1,15 @@
 import styled from "styled-components";
 import BlockHeader from "./BlockHeader";
 import { ContainerStl } from "../../Styles/Container";
-import { BlockContentType } from "./type";
+import { IBlock } from "../../mocks/type";
 
-export default function BlockContent({
+export default function FirstBlock({
   title,
   titleBody,
-  linkDetail,
   content,
+  linkDetail,
   backgroundUrl,
-}: BlockContentType) {
+}: IBlock) {
   return (
     <Stl.Wrap $backgroundUrl={backgroundUrl}>
       <ContainerStl>

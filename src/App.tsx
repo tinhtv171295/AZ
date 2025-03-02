@@ -6,6 +6,8 @@ import ActivitiesPage from "./pages/Activities.page";
 import RecruitmentPage from "./pages/Recruitment.page";
 import ContactPage from "./pages/Contact.page";
 import ServicesPage from "./pages/Services.page";
+import BannerPage from "./pages/Template/BannerPage";
+import BlockContentPage from "./pages/Template/BlockContentPage";
 
 export default function App() {
   return (
@@ -35,6 +37,11 @@ export default function App() {
           </Route>
 
           <Route path="contact" element={<ContactPage />} />
+
+          <Route path="templates/*">
+            <Route path="banner" element={<BannerPage />} />
+            <Route path="block" element={<BlockContentPage />} />
+          </Route>
 
           <Route path="*" element={<HomePage />} />
         </Route>

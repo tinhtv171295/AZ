@@ -40,6 +40,7 @@ const Stl = {
     padding: 0 10px;
     overflow: hidden;
     height: 40px;
+    width: fit-content;
     color: ${({ $appearance }) => ($appearance === "dark" ? "#fff" : "#333")};
     background: ${({ $appearance }) =>
       $appearance === "light" ? "#fff" : "#333"};
