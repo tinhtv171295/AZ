@@ -16,6 +16,7 @@ import BlockEight from "../components/BlockContent/Eight.block";
 import BlockSecond from "../components/BlockContent/Second.block";
 import BlockNine from "../components/BlockContent/Nine.block";
 import BlockTen from "../components/BlockContent/Ten.block";
+import BlockEleven from "../components/BlockContent/Eleven.block";
 
 export default function RenderLayout(block: IBlock) {
   switch (block.type) {
@@ -44,6 +45,8 @@ export default function RenderLayout(block: IBlock) {
       return <BlockNine {...block} />;
     case "block-ten":
       return <BlockTen {...block} />;
+    case "block-eleven":
+      return <BlockEleven {...block} />;
     case "swiper-core-value":
       return <Carousel {...block} />;
     case "swiper-partner":
