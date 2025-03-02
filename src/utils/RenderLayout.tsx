@@ -11,7 +11,7 @@ import BlockFive from "../components/BlockContent/Five.block";
 import BlockSix from "../components/BlockContent/Six.block";
 import BlockSeven from "../components/BlockContent/Seven.block";
 import Carousel from "../components/Carousels/Swiper";
-import CauroselPartnerSwiper from "../components/Carousels/Partner.swiper";
+import CarouselPartnerSwiper from "../components/Carousels/Partner.swiper";
 import CarouselMemberPartnerSwiper from "../components/Carousels/MemberPartner.swiper";
 
 export default function RenderLayout(block: IBlock) {
@@ -37,11 +37,11 @@ export default function RenderLayout(block: IBlock) {
       return <BlockSeven {...block} />;
     case "block-eight":
       return <BlockContentEight {...block} />;
-    case "swiper-corevalue":
+    case "swiper-core-value":
       return <Carousel {...block} />;
     case "swiper-partner":
-      return <CauroselPartnerSwiper {...block} />;
-    case "swiper-memberpartner":
+      return <CarouselPartnerSwiper {...block} />;
+    case "swiper-member-partner":
       return <CarouselMemberPartnerSwiper {...block} />;
     default:
       return <React.Fragment>aaa</React.Fragment>;

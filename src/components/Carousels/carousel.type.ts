@@ -1,6 +1,6 @@
 type CarouselType =
-  | "swiper-corevalue"
+  | "swiper-core-value"
   | "swiper-partner"
-  | "swiper-memberpartner";
+  | "swiper-member-partner";
 
 export default CarouselType;

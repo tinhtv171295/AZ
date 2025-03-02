@@ -4,7 +4,7 @@ export const carouselData: IBlock[] = [
   {
     title:
       "<div><span>Tại DLS, chúng tôi rất coi trọng các giá trị cốt lõi của mình. Những giá trị này</span><br><span>là niềm tin nền tảng của đội ngũ của DLS - những con người chăm chỉ, sáng</span><br><span>tạo, hài hước, thông minh và độc đáo mà chúng tôi tự hào gọi là DLSers.</span></div>",
-    type: "swiper-corevalue", // cmd + i => suggest
+    type: "swiper-core-value", // cmd + i => suggest
     dataContent: [
       {
         title: "NHIỆT HUYẾT",
@@ -84,7 +84,7 @@ export const carouselData: IBlock[] = [
   },
   {
     title: "",
-    type: "swiper-memberpartner",
+    type: "swiper-member-partner",
     dataContent: [
       {
         title: "Anh Nguyễn Mạnh Dũng",
