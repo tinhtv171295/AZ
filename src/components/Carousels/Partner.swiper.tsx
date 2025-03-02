@@ -5,7 +5,7 @@ import { Grid, Pagination } from "swiper/modules";
 import { ContainerStl } from "../../Styles/Container";
 import TitleSecond from "../Titles/Second.title";
 
-export default function CauroselPartnerSwiper({
+export default function CarouselPartnerSwiper({
   dataContent,
   title,
   titleBody,
