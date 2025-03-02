@@ -1,7 +1,6 @@
 import React from "react";
 import BlockContentSecond from "../components/BlockContentOld/Second.block";
 import { IBlock } from "../mocks/type";
-import BlockContentEight from "../components/BlockContentOld/Eight.block";
 import FixedBanner from "../components/Banners/Fixed.banner";
 import ScrollBanner from "../components/Banners/Scroll.banner";
 import BlockFirst from "../components/BlockContent/First.block";
