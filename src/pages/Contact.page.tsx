@@ -6,7 +6,7 @@ import RenderLayout from "../utils/RenderLayout";
 import { useParams } from "react-router-dom";
 import { contactData } from "../mocks/contact.data";
 
-export default function AboutPage() {
+export default function ContactPage() {
   const { slug } = useParams();
   const [data, setData] = useState<IBlock[]>([]);
 

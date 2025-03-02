@@ -14,6 +14,7 @@ import Carousel from "../components/Carousels/Swiper";
 import CarouselPartnerSwiper from "../components/Carousels/Partner.swiper";
 import CarouselMemberPartnerSwiper from "../components/Carousels/MemberPartner.swiper";
 import CarouselHomeSwiper from "../components/Carousels/HomeCarousel.swiper";
+import BlockNine from "../components/BlockContent/Nine.block";
 
 export default function RenderLayout(block: IBlock) {
   switch (block.type) {
@@ -38,6 +39,8 @@ export default function RenderLayout(block: IBlock) {
       return <BlockSeven {...block} />;
     case "block-eight":
       return <BlockContentEight {...block} />;
+    case "block-nine":
+      return <BlockNine {...block} />;
     case "swiper-core-value":
       return <Carousel {...block} />;
     case "swiper-partner":
