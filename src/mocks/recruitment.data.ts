@@ -8,11 +8,6 @@ export const recruitmentTopData: IBlock[] = [
     backgroundUrl: "https://datax-talent.basecdn.net/dls/banner.jpg",
     dataContent: [],
   },
-  {
-    type: "block-twelve",
-    title: "",
-    dataContent: [],
-  },
 ];
 
 export const recruitmentData: IRecruitment[] = [
