@@ -18,8 +18,8 @@ export default function CarouselHomeSwiper({ dataContent }: IBlock) {
         loop
       >
         {dataContent.map((slide, i) => (
-          <Stl.SwiperSlide>
-            <Stl.SwiperItem key={i}>
+          <Stl.SwiperSlide key={i}>
+            <Stl.SwiperItem>
               <img src={slide.image} />
               <Stl.Title>{slide.title}</Stl.Title>
               {slide.content && (
