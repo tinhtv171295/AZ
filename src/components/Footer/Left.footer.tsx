@@ -25,7 +25,11 @@ export default function FooterLeft({ type, dataContent }: IBlock) {
         {dataContent.map((item, i) => (
           <Stl.ContentItem key={i}>
             <Stl.Title>
-              <span>{item.title}</span>
+              <strong
+                dangerouslySetInnerHTML={{
+                  __html: `${item.title}`,
+                }}
+              ></strong>
             </Stl.Title>
             <Stl.Des>{item.description}</Stl.Des>
           </Stl.ContentItem>
@@ -62,6 +66,12 @@ const Stl = {
     margin-bottom: 10px;
     line-height: 20px;
   `,
-  Title: styled.div``,
-  Des: styled.div``,
+  Title: styled.div`
+    strong {
+      font-weight: bolder;
+    }
+  `,
+  Des: styled.div`
+    font-weight: 100;
+  `,
 };

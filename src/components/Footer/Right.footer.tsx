@@ -72,5 +72,8 @@ const Stl = {
     &:not(:first-child) {
       margin-left: 24px;
     }
+    &:hover {
+      color: #428dff;
+    }
   `,
 };
