@@ -1,8 +1,13 @@
 import BannerType from "../components/Banners/banner.type";
 import BlockContentType from "../components/BlockContentOld/block.type";
 import CarouselType from "../components/Carousels/carousel.type";
+import FooterType from "../components/Footer/type";
 
-export type BlockType = BannerType | CarouselType | BlockContentType;
+export type BlockType =
+  | BannerType
+  | CarouselType
+  | BlockContentType
+  | FooterType;
 
 export interface IBlock {
   title: string;

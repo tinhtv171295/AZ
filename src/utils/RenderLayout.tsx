@@ -20,6 +20,8 @@ import BlockEleven from "../components/BlockContent/Eleven.block";
 import CarouselServiceSwiper from "../components/Carousels/Service.swiper";
 import BlockTwelve from "../components/BlockContent/Twelve.block";
 import NoMarginBanner from "../components/Banners/NoMargin.banner";
+import FooterLeft from "../components/Footer/Left.footer";
+import FooterRight from "../components/Footer/Right.footer";
 
 export default function RenderLayout(block: IBlock) {
   switch (block.type) {
@@ -54,7 +56,6 @@ export default function RenderLayout(block: IBlock) {
       return <BlockEleven {...block} />;
     case "block-twelve":
       return <BlockTwelve {...block} />;
-
     case "swiper-core-value":
       return <Carousel {...block} />;
     case "swiper-partner":
@@ -65,6 +66,11 @@ export default function RenderLayout(block: IBlock) {
       return <CarouselHomeSwiper {...block} />;
     case "swiper-service":
       return <CarouselServiceSwiper {...block} />;
+    case "footer-left":
+      return <FooterLeft {...block} />;
+    case "footer-right":
+      return <FooterRight {...block} />;
+
     default:
       return <React.Fragment>aaa</React.Fragment>;
   }
