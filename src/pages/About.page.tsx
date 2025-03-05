@@ -5,13 +5,21 @@ import React from "react";
 import { IBlock } from "../mocks/type";
 import RenderLayout from "../utils/RenderLayout";
 import { useParams } from "react-router-dom";
+import { coreValueData } from "../mocks/coreValue.data";
 
 export default function AboutPage() {
   const { slug } = useParams();
   const [data, setData] = useState<IBlock[]>([]);
 
   useEffect(() => {
-    setData(aboutData);
+    if (slug === "about-us") {
+      setData(aboutData);
+      return;
+    }
+    if (slug === "core-value") {
+      setData(coreValueData);
+      return;
+    }
   }, [slug]);
 
   return (

@@ -2,6 +2,42 @@ import { IBlock } from "./type";
 
 export const homeData: IBlock[] = [
   {
+    type: "swiper-home",
+    title: "",
+    dataContent: [
+      {
+        title: "Mô hình POD",
+        image: "https://dlsinc.com/storage/section/3.RP8G061938a0bc0098.png",
+        content:
+          "DLS là một công ty POD (Print On Demand) cung cấp các sản phẩm cá nhân hóa cho khách hàng trên toàn thế giới.",
+      },
+      {
+        title: "Khác hàng toàn cầu",
+        image: "https://dlsinc.com/storage/section/3.8RZHP6193705b28389.png",
+        content:
+          "Chúng tôi phân phối sản phẩm đến hơn 180 quốc gia trên toàn thế giới, với dịch vụ nhanh hơn đến các quốc gia như Mỹ, Canada, New Zealand, Úc, Châu Âu và một số quốc gia Châu Á.",
+      },
+      {
+        title: "Sản phẩm cá nhân hóa",
+        image: "https://dlsinc.com/storage/section/3.DS68R619372ffaf70a.png",
+        content:
+          "Các sản phẩm cá nhân hóa của chúng tôi truyền tải tình cảm mà bạn muốn nói đến những người thân yêu của bạn, khiến họ sẽ nhớ mãi về những cảm xúc ấy mỗi khi sử dụng chúng.",
+      },
+      {
+        title: "Giá trị cốt lõi riêng biệt",
+        image: "https://dlsinc.com/storage/section/3.TGFVR60bdc764e15f5.png",
+        content:
+          "Giá trị cốt lõi của chúng tôi là: Nhiệt huyết, Tử tế, Niềm tin, Biết ơn. Đây là những niềm tin cơ bản của chúng tôi, những người chăm chỉ, sáng tạo, hài hước, thông minh, và tuyệt vời mà chúng tôi tự hào gọi là các DLSers.",
+      },
+      {
+        title: "Chính sách phúc lợi hấp dẫn",
+        image: "https://dlsinc.com/storage/section/3.X09QS60bdc76f0d534.png",
+        content:
+          "Khám phá gói phúc lợi hấp dẫn của chúng tôi bao gồm các khoản thưởng, câu lạc bộ, bữa trưa miễn phí, học tập và đào tạo, kỳ nghỉ hàng năm, chăm sóc gia đình, bảo hiểm sức khỏe, các hoạt động văn hóa - thể thao và nhiều hơn thế nữa.",
+      },
+    ],
+  },
+  {
     title: "Dls là ai?",
     titleBody: `DLS Inc.<br> Play to win.`,
     linkDetail: "///",
@@ -110,20 +146,20 @@ export const homeData: IBlock[] = [
       "https://dlsinc.com/resource/template/frontend/default2/style/../image/bg-chievements.jpg",
     dataContent: [
       {
-        title: "20",
-        description: "Online stores",
+        title: "Online stores",
+        description: "20",
       },
       {
-        title: "96%",
-        description: "Happy customers",
+        title: "Happy customers",
+        description: "96%",
       },
       {
-        title: "+500k",
-        description: "Orders",
+        title: "Orders",
+        description: "+500k",
       },
       {
-        title: "1M",
-        description: "Items",
+        title: "Items",
+        description: "1M",
       },
     ],
   },
