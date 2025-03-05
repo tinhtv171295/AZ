@@ -10,6 +10,7 @@ import BannerPage from "./pages/Template/BannerPage";
 import BlockContentPage from "./pages/Template/BlockContentPage";
 import CauroselPage from "./pages/Template/Carousel.page";
 import RecruitmentDetailPage from "./pages/RecruitmentDetail.page";
+import ApplyCVPage from "./pages/ApplyCV.page";
 
 export default function App() {
   return (
@@ -35,6 +36,7 @@ export default function App() {
 
           <Route path="recruitment/*">
             <Route index element={<RecruitmentPage />} />
+            <Route path="apply" element={<ApplyCVPage />} />
             <Route path=":slug" element={<RecruitmentDetailPage />} />
           </Route>
 

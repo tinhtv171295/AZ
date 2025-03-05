@@ -100,78 +100,7 @@ export const recruitmentData: IRecruitment[] = [
     applicationPeriod: new Date("2025-02-11"),
     quantity: 1,
     image: `https://data-gcdn.basecdn.net/202502/sys2617/hiring/06/17/KAUDAP4M8V8NN5J46YBY/ZWQ7UVWA8AS9O1GLUN5YMXQHS2R4UM99/RTQMFVTM4K68RMQV6WO77YFQUT4C74BLA6CGCEPELS3D9AG9V4OB8QLPZDM84NTZRIPF9C4X6E2G8AX9EHX82M/e6/a0/11/b7/0d/f47d843ebc3c6626552a52ad2b2dcfab/brand_manager.jpg`,
-    content: `<p>&nbsp;</p>
-<p style="text-align: center;"><strong><span style="font-size: 11pt; font-family: Proxima Nova,sans-serif; color: #000000;">BẢN MÔ TẢ CÔNG VIỆC</span></strong></p>
-<p style="text-align: center;"><strong><span style="font-size: 11pt; font-family: Proxima Nova,sans-serif; color: #000000;">Vị trí: Brand Manager</span></strong></p>
-<p style="text-align: center;"><span style="font-size: 11pt; font-family: Proxima Nova,sans-serif; color: #000000; font-weight: 400;">Mức lương: Thỏa thuận&nbsp;</span></p>
-<p><strong><span style="font-size: 11pt; font-family: Proxima Nova,sans-serif; color: #000000;">1, Công việc chính:&nbsp;</span></strong></p>
-<ul>
-<li><strong><span style="font-size: 11pt; font-family: Proxima Nova,sans-serif; color: #000000;">Xây dựng, giám sát &amp; triển khai chiến lược thương hiệu:</span></strong>
-<ul>
-<li>Xây dựng chiến lược định vị thương hiệu và kế hoạch phát triển thương hiệu dài hạn cho các nhãn hiệu phụ trách.</li>
-<li>Phát triển và quản trị danh mục thương hiệu phụ trách</li>
-</ul>
-</li>
-</ul>
-<ul>
-<li><strong><span style="font-size: 11pt; font-family: Proxima Nova,sans-serif; color: #000000;">Quản lý, thực thi hoạt động thương hiệu: </span></strong>
-<ul>
-<li>Phát triển kế hoạch tiếp thị tích hợp, bao gồm quảng cáo, digital marketing, PR và chiến dịch truyền thông xã hội.</li>
-<li>Thiết kế và kiểm soát trải nghiệm khách hàng đồng nhất.</li>
-<li>Đề xuất, giám sát thực thi hiệu quả các hoạt động xúc tiến thương mại của thương hiệu giúp đạt mục tiêu kinh doanh</li>
-<li>Xây dựng cơ chế và hệ thống loyalty cho thương hiệu.</li>
-<li>Quản lý hiệu quả ngân sách MKT</li>
-</ul>
-</li>
-</ul>
-<ul>
-<li><strong><span style="font-size: 11pt; font-family: Proxima Nova,sans-serif; color: #000000;">Nắm bắt xu hướng thị trường và khách hàng:</span></strong>
-<ul>
-<li>Nghiên cứu và theo dõi xu hướng thị trường, hành vi khách hàng, và phân tích dữ liệu bán hàng để tối ưu hóa chiến lược tiếp thị.</li>
-<li>Đề xuất các sản phẩm/dịch vụ mới dựa trên nhu cầu khách hàng.</li>
-</ul>
-</li>
-</ul>
-<ul>
-<li><strong><span style="font-size: 11pt; font-family: Proxima Nova,sans-serif; color: #000000;">Hỗ trợ các hoạt động phát triển kênh thương mại điện tử</span></strong><span style="font-size: 11pt; font-family: Proxima Nova,sans-serif; color: #000000; font-weight: 400;">:&nbsp; các nền tảng như Amazon, Shopify, Walmart, và các sàn TMĐT khác.&nbsp;&nbsp;</span></li>
-<li><span style="font-size: 11pt; font-family: Proxima Nova,sans-serif; color: #000000; font-weight: 400;">Các công việc chuyên môn liên quan khác</span><span style="font-size: 11pt; font-family: Proxima Nova,sans-serif; color: #000000; font-weight: 400;"> </span></li>
-</ul>
-<p><strong><span style="font-size: 11pt; font-family: Proxima Nova,sans-serif; color: #000000;">2, Yêu cầu kĩ năng, kinh nghiệm:&nbsp;</span></strong></p>
-<ul>
-<li><span style="font-size: 11pt; font-family: Proxima Nova,sans-serif; color: #000000; font-weight: 400;">Tối thiểu 2 năm kinh nghiệm làm việc trong vai trò Brand Manager hoặc Marketing Manager</span></li>
-<li><span style="font-size: 11pt; font-family: Proxima Nova,sans-serif; color: #000000; font-weight: 400;">Có kinh nghiệm triển khai các hoạt động Brand &amp; Digital Marketing trên sàn thương mại điện tử, ưu tiên có kinh nghiệm với thị trường Mỹ.</span><span style="font-size: 11pt; font-family: Proxima Nova,sans-serif; color: #000000; font-weight: 400;"> </span><span style="font-size: 11pt; font-family: Proxima Nova,sans-serif; color: #000000; font-weight: 400;"> </span></li>
-<li><span style="font-size: 11pt; font-family: Proxima Nova,sans-serif; color: #000000; font-weight: 400;">Hiểu biết hoặc có kinh nghiệm thực tế trong lĩnh vực Grocery, Supplement hoặc FMCG là lợi thế lớn.</span><span style="font-size: 11pt; font-family: Proxima Nova,sans-serif; color: #000000; font-weight: 400;"> </span></li>
-<li><span style="font-size: 11pt; font-family: Proxima Nova,sans-serif; color: #000000; font-weight: 400;">Kỹ năng phân tích dữ liệu: Hiểu và áp dụng tốt Google Analytics, Helium10, các công cụ đo lường TMĐT và phân tích hiệu quả chiến dịch.</span><span style="font-size: 11pt; font-family: Proxima Nova,sans-serif; color: #000000; font-weight: 400;"> </span></li>
-<li><span style="font-size: 11pt; font-family: Proxima Nova,sans-serif; color: #000000; font-weight: 400;">Quen thuộc các công cụ chiến lược marketing: 5 Forces, 3Cs, ANSOFF, SWOT, BCG...</span><span style="font-size: 11pt; font-family: Proxima Nova,sans-serif; color: #000000; font-weight: 400;"> </span></li>
-<li><span style="font-size: 11pt; font-family: Proxima Nova,sans-serif; color: #000000; font-weight: 400;">Hiểu biết về SEO, PPC, và tối ưu hóa trải nghiệm khách hàng trên các nền tảng TMĐT.</span><span style="font-size: 11pt; font-family: Proxima Nova,sans-serif; color: #000000; font-weight: 400;"> </span><span style="font-size: 11pt; font-family: Proxima Nova,sans-serif; color: #000000; font-weight: 400;"> </span></li>
-<li><span style="font-size: 11pt; font-family: Proxima Nova,sans-serif; color: #000000; font-weight: 400;">Tiếng Anh tương đương IELTS 6.5 trở lên</span></li>
-</ul>
-<p><strong><span style="font-size: 11pt; font-family: Proxima Nova,sans-serif; color: #000000;">3, Thời gian, địa điểm làm việc:</span></strong></p>
-<ul>
-<li><span style="font-size: 11pt; font-family: Proxima Nova,sans-serif; color: #000000; font-weight: 400;">Thời gian: </span><span style="font-size: 11pt; font-family: Proxima Nova,sans-serif; color: #000000; font-weight: 400;"><br></span><span style="font-size: 11pt; font-family: Proxima Nova,sans-serif; color: #000000; font-weight: 400;">Thứ 2 - Thứ 6: 8h30-18h00; nghỉ trưa từ 12h đến 13h30 (văn phòng Hà Nội)&nbsp;</span></li>
-<li><span style="font-size: 11pt; font-family: Proxima Nova,sans-serif; color: #000000; font-weight: 400;">Địa điểm: </span><span style="font-size: 11pt; font-family: Proxima Nova,sans-serif; color: #000000; font-weight: 400;"><br></span><span style="font-size: 11pt; font-family: Proxima Nova,sans-serif; color: #000000; font-weight: 400;">Văn phòng Hà Nội: Tầng 7, tòa nhà Hanoi Centerpoint, số 27 Lê Văn Lương, Phường Nhân Chính, Quận Thanh Xuân, Hà Nội.</span><span style="font-size: 11pt; font-family: Proxima Nova,sans-serif; color: #000000; font-weight: 400;"><br><br></span></li>
-</ul>
-<p><strong><span style="font-size: 11pt; font-family: Proxima Nova,sans-serif; color: #000000;">4, Bạn sẽ nhận được gì?</span></strong></p>
-<p><strong><span style="font-size: 11pt; font-family: Proxima Nova,sans-serif; color: #000000;">Chế độ đãi ngộ hấp dẫn:</span></strong></p>
-<ul>
-<li><span style="font-size: 11pt; font-family: Proxima Nova,sans-serif; color: #000000; font-weight: 400;">Mức lương hàng tháng tương xứng với năng lực cùng mức thưởng doanh số vô cùng hấp dẫn&nbsp;</span></li>
-<li><span style="font-size: 11pt; font-family: Proxima Nova,sans-serif; color: #000000; font-weight: 400;">Được trang bị đầy đủ thiết bị làm việc hiện đại, đời mới nhất;</span></li>
-<li><span style="font-size: 11pt; font-family: Proxima Nova,sans-serif; color: #000000; font-weight: 400;">Được bảo đảm chăm sóc y tế toàn diện cho ốm đau, tai nạn bằng bảo hiểm sức khỏe với mức chi trả cao do công ty tài trợ 100% phí bảo hiểm;&nbsp;</span></li>
-<li><span style="font-size: 11pt; font-family: Proxima Nova,sans-serif; color: #000000; font-weight: 400;">Được tận hưởng bữa ăn miễn phí chuẩn “cơm trưa mẹ nấu" cùng chiếc pantry luôn đầy ắp hoa quả tươi, bánh kẹo, snack, trà &amp; cafe mỗi ngày;</span></li>
-<li><span style="font-size: 11pt; font-family: Proxima Nova,sans-serif; color: #000000; font-weight: 400;">Tham gia hoạt động teambuilding, du lịch cùng công ty 2 lần/1 năm;</span></li>
-<li><span style="font-size: 11pt; font-family: Proxima Nova,sans-serif; color: #000000; font-weight: 400;">Được hỗ trợ chi phí tham gia các câu lạc bộ sở thích và thể dục thể thao của công ty.</span></li>
-</ul>
-<p><strong><span style="font-size: 11pt; font-family: Proxima Nova,sans-serif; color: #000000;">Cơ hội học hỏi, phát triển:</span></strong></p>
-<ul>
-<li><span style="font-size: 11pt; font-family: Proxima Nova,sans-serif; color: #000000; font-weight: 400;">Các chương trình đào tạo online &amp; offline phong phú cả về kỹ năng chuyên môn lẫn kỹ năng mềm;</span></li>
-<li><span style="font-size: 11pt; font-family: Proxima Nova,sans-serif; color: #000000; font-weight: 400;">Chính sách học hỏi phát triển hỗ trợ một phần/ toàn phần chi phí học tập gắn với mục tiêu phát triển năng lực của công ty;</span></li>
-<li><span style="font-size: 11pt; font-family: Proxima Nova,sans-serif; color: #000000; font-weight: 400;">Cơ hội phát triển nghề nghiệp rõ ràng và linh hoạt;&nbsp;</span></li>
-</ul>
-<p><strong><span style="font-size: 11pt; font-family: Proxima Nova,sans-serif; color: #000000;">Môi trường làm việc trẻ trung, năng động:</span></strong></p>
-<ul>
-<li><span style="font-size: 11pt; font-family: Proxima Nova,sans-serif; color: #000000; font-weight: 400;">Môi trường làm việc thoải mái, cởi mở, mọi ý kiến đều được lắng nghe và ghi nhận bởi sếp và đồng nghiệp;&nbsp;</span></li>
-<li><span style="font-size: 11pt; font-family: Proxima Nova,sans-serif; color: #000000; font-weight: 400;">Văn phòng "xanh", hiện đại với nhiều không gian mở và khu vực dùng chung như phòng gaming, pantry, booth, conference.&nbsp;</span></li>
-</ul>`,
+    content: ``,
   },
 ];
 

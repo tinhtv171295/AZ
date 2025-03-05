@@ -14,6 +14,8 @@ import TitleThird from "../components/Titles/Third.title";
 import styled from "styled-components";
 import IRecruitment from "../components/Recruitment/type";
 import Jobs from "../components/Recruitment/Jobs";
+import SearchSection from "../components/Recruitment/SearchSection";
+import ApplySection from "../components/Recruitment/ApplySection";
 
 export default function RecruitmentPage() {
   const [dataTop, setDataTop] = useState<IBlock[]>([]);
@@ -36,6 +38,8 @@ export default function RecruitmentPage() {
         <React.Fragment key={i}>{RenderLayout(block)}</React.Fragment>
       ))}
 
+      <SearchSection />
+
       <section id="allJobs">
         <ContainerStl>
           <Stl.WrapTitle>
@@ -51,6 +55,8 @@ export default function RecruitmentPage() {
           </Stl.WrapList>
         </ContainerStl>
       </section>
+
+      <ApplySection />
 
       {dataBottom.map((block, i) => (
         <React.Fragment key={i}>{RenderLayout(block)}</React.Fragment>

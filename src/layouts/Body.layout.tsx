@@ -6,7 +6,5 @@ export default function BodyLayout({ children }: PropsWithChildren) {
 }
 
 const Stl = {
-  Wrap: styled.div`
-    margin-bottom: 50px;
-  `,
+  Wrap: styled.div``,
 };

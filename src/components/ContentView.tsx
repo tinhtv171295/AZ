@@ -1,4 +1,4 @@
-import styled, { WebTarget } from "styled-components";
+import styled, { css, WebTarget } from "styled-components";
 
 type TextAlign = "right" | "center" | "justify" | "left" | "inherit";
 
@@ -20,6 +20,29 @@ export default function ContentView({ content, align = "justify", el }: Props) {
   );
 }
 
+const ContentCss = css`
+  p {
+    color: #000 !important;
+    margin-bottom: 5px;
+    line-height: 26px;
+    font-size: 11pt !important;
+  }
+  ul {
+    list-style: initial;
+    margin-left: 20px;
+  }
+  li {
+    color: #000;
+    padding-left: 10px;
+    padding-bottom: 5px;
+    white-space: normal !important;
+    font-size: 11pt !important;
+  }
+  span {
+    color: #000 !important;
+  }
+`;
+
 const Stl = (dl?: WebTarget) => {
   if (dl !== undefined) {
     return {
@@ -27,6 +50,8 @@ const Stl = (dl?: WebTarget) => {
         display: block;
         font-size: 16px;
         line-height: 22px;
+        text-align: ${({ $align }) => $align};
+        ${ContentCss}
       `,
     };
   }
@@ -36,6 +61,7 @@ const Stl = (dl?: WebTarget) => {
       font-size: 16px;
       line-height: 22px;
       text-align: ${({ $align }) => $align};
+      ${ContentCss}
     `,
   };
 };
