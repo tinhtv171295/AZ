@@ -41,7 +41,6 @@ const Stl = {
   SwiperContainer: styled.div`
     height: 100%;
     width: 100%;
-    margin: 50px 0;
   `,
   Swiper: styled(Swiper)``,
   SwiperSlide: styled(SwiperSlide)`

@@ -33,7 +33,7 @@ export default function BlockSeven({
 
 const Stl = {
   Wrap: styled.div<{ $backgroundUrl?: string; $backgroundColor?: string }>`
-    padding: 60px 0;
+    padding: 0 0 60px;
     ${({ $backgroundUrl, $backgroundColor }) =>
       $backgroundUrl !== undefined
         ? `

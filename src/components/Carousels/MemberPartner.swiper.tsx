@@ -13,60 +13,66 @@ export default function CarouselMemberPartnerSwiper({
   titleBody,
 }: IBlock) {
   return (
-    <ContainerStl>
-      {title !== "" && <TitleSecond title={title} titleBody={titleBody} />}
-      <Stl.BodyContainer>
-        <Stl.Next className="next">
-          <RightIcon />
-        </Stl.Next>
-        <Stl.Perv className="prev">
-          <LeftIcon />
-        </Stl.Perv>
-        <Stl.Swiper
-          centeredSlides={true}
-          spaceBetween={10}
-          slidesPerView={1}
-          pagination={{
-            clickable: true,
-          }}
-          modules={[Pagination, Navigation]}
-          loop
-          navigation={{
-            nextEl: ".next",
-            prevEl: ".prev",
-          }}
-          breakpoints={{
-            768: {
-              slidesPerView: 3,
-            },
-          }}
-        >
-          {dataContent.map((slide, i) => (
-            <Stl.SwiperSlide key={i}>
-              <Stl.Card>
-                <img src={slide.image} />
-                <Stl.Body>
-                  <Stl.Title>{slide.title}</Stl.Title>
-                  <Stl.Desc>{slide.description}</Stl.Desc>
-                  <Stl.Divider></Stl.Divider>
-                  {slide.content && (
-                    <Stl.BodyContent
-                      dangerouslySetInnerHTML={{
-                        __html: `${slide.content}`,
-                      }}
-                    />
-                  )}
-                </Stl.Body>
-              </Stl.Card>
-            </Stl.SwiperSlide>
-          ))}
-        </Stl.Swiper>
-      </Stl.BodyContainer>
-    </ContainerStl>
+    <Stl.Container>
+      <ContainerStl>
+        {title !== "" && <TitleSecond title={title} titleBody={titleBody} />}
+        <Stl.BodyContainer>
+          <Stl.Next className="next">
+            <RightIcon />
+          </Stl.Next>
+          <Stl.Perv className="prev">
+            <LeftIcon />
+          </Stl.Perv>
+          <Stl.Swiper
+            centeredSlides={true}
+            spaceBetween={10}
+            slidesPerView={1}
+            pagination={{
+              clickable: true,
+            }}
+            modules={[Pagination, Navigation]}
+            loop
+            navigation={{
+              nextEl: ".next",
+              prevEl: ".prev",
+            }}
+            breakpoints={{
+              768: {
+                slidesPerView: 3,
+              },
+            }}
+          >
+            {dataContent.map((slide, i) => (
+              <Stl.SwiperSlide key={i}>
+                <Stl.Card>
+                  <img src={slide.image} />
+                  <Stl.Body>
+                    <Stl.Title>{slide.title}</Stl.Title>
+                    <Stl.Desc>{slide.description}</Stl.Desc>
+                    <Stl.Divider></Stl.Divider>
+                    {slide.content && (
+                      <Stl.BodyContent
+                        dangerouslySetInnerHTML={{
+                          __html: `${slide.content}`,
+                        }}
+                      />
+                    )}
+                  </Stl.Body>
+                </Stl.Card>
+              </Stl.SwiperSlide>
+            ))}
+          </Stl.Swiper>
+        </Stl.BodyContainer>
+      </ContainerStl>
+    </Stl.Container>
   );
 }
 
 const Stl = {
+  Container: styled.div`
+    background-color: #f7f7f7;
+    padding: 60px 0;
+  `,
   BodyContainer: styled.div`
     position: relative;
   `,

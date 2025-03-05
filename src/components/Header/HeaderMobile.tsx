@@ -24,28 +24,26 @@ export default function HeaderMobile({ open, menus }: Props) {
         <Stl.WrapMenu>
           <Stl.Menu $open={true}>
             {menus.map((menu, i) => (
-              <>
-                <Stl.Item key={i}>
-                  <Stl.ItemLabel>
-                    <Stl.Link>{menu.name}</Stl.Link>
-                    {menu.menu && (
-                      <Stl.ButtonArrow
-                        $open={openMenu === i}
-                        onClick={() => toggleMenu(i)}
-                      />
-                    )}
-                  </Stl.ItemLabel>
+              <Stl.Item key={i}>
+                <Stl.ItemLabel>
+                  <Stl.Link>{menu.name}</Stl.Link>
                   {menu.menu && (
-                    <Stl.Menu $open={openMenu === i}>
-                      {menu.menu.map((item, id) => (
-                        <Stl.Item key={id}>
-                          <Stl.LinkSub>{item.name}</Stl.LinkSub>
-                        </Stl.Item>
-                      ))}
-                    </Stl.Menu>
+                    <Stl.ButtonArrow
+                      $open={openMenu === i}
+                      onClick={() => toggleMenu(i)}
+                    />
                   )}
-                </Stl.Item>
-              </>
+                </Stl.ItemLabel>
+                {menu.menu && (
+                  <Stl.Menu $open={openMenu === i}>
+                    {menu.menu.map((item, id) => (
+                      <Stl.Item key={id}>
+                        <Stl.LinkSub>{item.name}</Stl.LinkSub>
+                      </Stl.Item>
+                    ))}
+                  </Stl.Menu>
+                )}
+              </Stl.Item>
             ))}
           </Stl.Menu>
         </Stl.WrapMenu>

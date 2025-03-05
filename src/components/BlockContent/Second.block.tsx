@@ -47,8 +47,8 @@ export default function BlockSecond({
             loop
           >
             {dataContent.map((item, i) => (
-              <SwiperSlide>
-                <CardInfo key={i} data={item} />
+              <SwiperSlide key={i}>
+                <CardInfo data={item} />
               </SwiperSlide>
             ))}
           </Swiper>

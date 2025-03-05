@@ -15,34 +15,40 @@ export const aboutData: IBlock[] = [
     type: "block-six",
     dataContent: [
       {
-        image: "https://dlsinc.com/storage/setting/1.O5HFQ5e81dd55a2fdc.jpg",
-        title: "MR.TRUONG VAN TINH",
+        image:
+          "https://dlsinc.com/storage/leader/24.08.2021/manual.3.XHBC76124ad601aa55.png",
+        title: "MR.DO THANH LUAN",
         description: "Co-Founder-CEO",
       },
       {
-        image: "https://dlsinc.com/storage/setting/1.O5HFQ5e81dd55a2fdc.jpg",
-        title: "MR.TRUONG VAN TINH",
-        description: "Co-Founder-CEO",
+        image:
+          "https://dlsinc.com/storage/leader/24.08.2021/manual.3.DD61X6124ad725f6c1.png",
+        title: "MR.HOANG DAT",
+        description: "Co-Founder",
       },
       {
-        image: "https://dlsinc.com/storage/setting/1.O5HFQ5e81dd55a2fdc.jpg",
-        title: "MR.TRUONG VAN TINH",
-        description: "Co-Founder-CEO",
+        image:
+          "https://dlsinc.com/storage/leader/24.08.2021/manual.3.MLEJF6124ad481150f.png",
+        title: "MR.NGUYEN THANH SON",
+        description: "Co-Founder",
       },
       {
-        image: "https://dlsinc.com/storage/setting/1.O5HFQ5e81dd55a2fdc.jpg",
-        title: "MR.TRUONG VAN TINH",
-        description: "Co-Founder-CEO",
+        image:
+          "https://dlsinc.com/storage/leader/09.09.2024/manual.3.IKDX466de61277cc28.png",
+        title: "MR.LE DUY DUONG",
+        description: "BOM",
       },
       {
-        image: "https://dlsinc.com/storage/setting/1.O5HFQ5e81dd55a2fdc.jpg",
-        title: "MR.TRUONG VAN TINH",
-        description: "Co-Founder-CEO",
+        image:
+          "https://dlsinc.com/storage/leader/09.09.2024/manual.3.RPX2S66de611a90310.png",
+        title: "MR.NGUYEN QUANG ANH",
+        description: "CTO",
       },
       {
-        image: "https://dlsinc.com/storage/setting/1.O5HFQ5e81dd55a2fdc.jpg",
-        title: "MR.TRUONG VAN TINH",
-        description: "Co-Founder-CEO",
+        image:
+          "https://dlsinc.com/storage/leader/09.09.2024/manual.3.ZXHI066de5db5089c4.jpg",
+        title: "MR.NGUYEN MANH SON",
+        description: "BOM",
       },
     ],
   },
