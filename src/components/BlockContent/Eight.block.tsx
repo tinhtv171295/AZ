@@ -46,6 +46,8 @@ export default function BlockEight({
 
 const Stl = {
   Wrap: styled.div<{ $backgroundUrl?: string; $backgroundColor?: string }>`
+    padding-top: 10px;
+    padding-bottom: 50px;
     ${({ $backgroundUrl, $backgroundColor }) =>
       $backgroundUrl !== undefined
         ? `

@@ -52,6 +52,10 @@ const LinkCss = css`
   -moz-transition: color 0.3s ease;
   transition: color 0.3s ease;
   white-space: nowrap;
+
+  &.active {
+    color: #428dff;
+  }
 `;
 
 const SubMenuLinkCss = css`

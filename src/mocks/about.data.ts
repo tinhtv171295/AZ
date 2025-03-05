@@ -2,6 +2,14 @@ import { IBlock } from "./type";
 
 export const aboutData: IBlock[] = [
   {
+    type: "banner-fixed",
+    title: "Về chúng tôi",
+    titleBody: "Dls là ai",
+    backgroundUrl:
+      "https://dlsinc.com/storage/setting/1.O5HFQ5e81dd55a2fdc.jpg",
+    dataContent: [],
+  },
+  {
     title: "Play to win",
     backgroundUrl:
       "https://dlsinc.com/storage/setting/3.3XYBF61937514688fa.jpg",

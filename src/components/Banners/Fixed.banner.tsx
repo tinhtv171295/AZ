@@ -1,21 +1,23 @@
 import styled from "styled-components";
-import Button from "../UI/Button";
 import { IBlock } from "../../mocks/type";
+import { BannerButtonTitle } from "./style";
 
 export default function FixedBanner({
   title,
   titleBody,
   backgroundUrl,
+  linkDetail,
 }: IBlock) {
   return (
     <Stl.Wrap $backgroundUrl={backgroundUrl}>
       <Stl.Content>
-        <Stl.Button>
-          <Button appearance="dark" href="#" transparent>
-            {title}
-          </Button>
-        </Stl.Button>
-        <Stl.TitleBody>{titleBody}</Stl.TitleBody>
+        {title !== "" && (
+          <BannerButtonTitle
+            title={title}
+            titleBody={titleBody}
+            linkDetail={linkDetail}
+          />
+        )}
       </Stl.Content>
     </Stl.Wrap>
   );
