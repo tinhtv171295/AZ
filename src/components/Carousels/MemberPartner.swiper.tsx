@@ -13,7 +13,7 @@ export default function CarouselMemberPartnerSwiper({
   titleBody,
 }: IBlock) {
   return (
-    <ContainerStl>
+    <Stl.Container>
       {title !== "" && <TitleSecond title={title} titleBody={titleBody} />}
       <Stl.BodyContainer>
         <Stl.Next className="next">
@@ -62,13 +62,18 @@ export default function CarouselMemberPartnerSwiper({
           ))}
         </Stl.Swiper>
       </Stl.BodyContainer>
-    </ContainerStl>
+    </Stl.Container>
   );
 }
 
 const Stl = {
+  Container: styled(ContainerStl)`
+    display: flex;
+    flex-flow: column nowrap;
+  `,
   BodyContainer: styled.div`
     position: relative;
+    display: block;
   `,
   Next: styled.div`
     display: none;

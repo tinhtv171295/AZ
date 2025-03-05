@@ -37,7 +37,6 @@ const Stl = {
     justify-content: center;
     flex-direction: column;
     position: relative;
-    margin-bottom: 60px;
 
     &&::before {
       content: "";
