@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { IBlockContent } from "../../mocks/type";
-import { NavLink } from "react-router-dom";
+import SeeMore from "../../Styles/SeeMore";
 
 type Props = {
   data: IBlockContent;
@@ -22,7 +22,7 @@ export default function CardInfo({ data }: Props) {
       <Stl.Description>{data.description}</Stl.Description>
       {data.linkDetail && (
         <Stl.SeeMore>
-          <NavLink to={data.linkDetail}>Xem thêm</NavLink>
+          <SeeMore url={data.linkDetail} />
         </Stl.SeeMore>
       )}
     </Stl.Wrap>

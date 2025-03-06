@@ -1,15 +1,15 @@
-import BodyLayout from "../layouts/Body.layout";
-import { useEffect, useState } from "react";
-import { aboutData } from "../mocks/about.data";
 import React from "react";
+import { useEffect, useState } from "react";
+import BodyLayout from "../layouts/Body.layout";
 import { IBlock } from "../mocks/type";
 import RenderLayout from "../utils/RenderLayout";
+import { activityData } from "../mocks/activities.data";
 
-export default function AboutPage() {
+export default function ActivityPage() {
   const [data, setData] = useState<IBlock[]>([]);
 
   useEffect(() => {
-    setData(aboutData);
+    setData(activityData);
   }, []);
 
   return (

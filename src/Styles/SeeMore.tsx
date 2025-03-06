@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import ChevronIcon from "../components/UI/Icons/Chevron";
+import { NavLink } from "react-router-dom";
 
 type Props = {
   url?: string;
@@ -8,7 +9,7 @@ type Props = {
 export default function SeeMore({ url = "#" }: Props) {
   return (
     <Stl.Wrap>
-      <Stl.Link href={url}>
+      <Stl.Link to={url}>
         <span>Xem thêm</span>
         <ChevronIcon />
       </Stl.Link>
@@ -20,7 +21,7 @@ const Stl = {
   Wrap: styled.div`
     font-size: 14px;
   `,
-  Link: styled.a`
+  Link: styled(NavLink)`
     color: var(--color-primary);
     span {
       transition: all 0.3s ease;

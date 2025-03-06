@@ -21,7 +21,7 @@ export default function BlockFour({
       $backgroundColor={backgroundColor}
     >
       <ContainerStl>
-        <TitleSecond
+        <Stl.Title
           title={title}
           titleBody={titleBody}
           linkDetail={linkDetail}
@@ -66,6 +66,9 @@ const Stl = {
             min-height: 600px;
       `
         : `${$backgroundColor ? `background: ${$backgroundColor};` : ""}`}
+  `,
+  Title: styled(TitleSecond)`
+    display: none;
   `,
   WrapItem: styled.div``,
   Item: styled.div`

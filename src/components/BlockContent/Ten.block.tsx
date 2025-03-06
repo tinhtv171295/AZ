@@ -2,6 +2,7 @@ import { css, styled } from "styled-components";
 import { IBlock } from "../../mocks/type";
 import { ContainerStl } from "../../Styles/Container";
 import { RowLayout } from "../../Styles/Row";
+import { NavLink } from "react-router-dom";
 
 export default function BlockTen({ backgroundColor, dataContent }: IBlock) {
   let id = 0;
@@ -86,7 +87,7 @@ function ItemImage({ title, image, link, isBig }: Props) {
   if (isBig)
     return (
       <Stl.BigItem>
-        <a href={link}></a>
+        <Stl.Link to={`${link ?? "#"}`}></Stl.Link>
         <img src={image} alt={title} />
         <Stl.Title>
           <span>{title}</span>
@@ -95,7 +96,7 @@ function ItemImage({ title, image, link, isBig }: Props) {
     );
   return (
     <Stl.Item>
-      <a href={link}></a>
+      <Stl.Link to={`${link ?? "#"}`}></Stl.Link>
       <img src={image} alt={title} />
       <Stl.Title>
         <span>{title}</span>
@@ -193,5 +194,16 @@ const Stl = {
     padding: 10px;
     width: 100%;
     z-index: 2;
+  `,
+  Link: styled(NavLink)`
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: block;
+    left: 0;
+    bottom: 0;
+    z-index: 3;
+    text-decoration: none;
+    outline-width: 0;
   `,
 };

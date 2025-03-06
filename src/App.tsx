@@ -8,9 +8,13 @@ import ContactPage from "./pages/Contact.page";
 import ServicesPage from "./pages/Services.page";
 import BannerPage from "./pages/Template/BannerPage";
 import BlockContentPage from "./pages/Template/BlockContentPage";
-import CauroselPage from "./pages/Template/Carousel.page";
+import CarouselPage from "./pages/Template/Carousel.page";
 import RecruitmentDetailPage from "./pages/RecruitmentDetail.page";
 import ApplyCVPage from "./pages/ApplyCV.page";
+import CoreValuePage from "./pages/CoreValue.page";
+import AwardPage from "./pages/Award.page";
+import ActivityPage from "./pages/Activity.page";
+import AlbumPage from "./pages/Album.page";
 
 export default function App() {
   return (
@@ -19,10 +23,13 @@ export default function App() {
         <Route path="/" element={<MainLayout />}>
           <Route index element={<HomePage />} />
 
-          <Route path="about/*">
+          <Route path="about">
             <Route index element={<AboutPage />} />
-            <Route path=":slug" element={<AboutPage />} />
+            <Route path="about-us" element={<AboutPage />} />
+            <Route path="core-value" element={<CoreValuePage />} />
           </Route>
+
+          <Route path="awards" element={<AwardPage />} />
 
           <Route path="services/*">
             <Route index element={<ServicesPage />} />
@@ -31,7 +38,8 @@ export default function App() {
 
           <Route path="activities/*">
             <Route index element={<ActivitiesPage />} />
-            <Route path=":slug" element={<ActivitiesPage />} />
+            <Route path=":slug" element={<ActivityPage />} />
+            <Route path=":slug/album" element={<AlbumPage />} />
           </Route>
 
           <Route path="recruitment/*">
@@ -45,7 +53,7 @@ export default function App() {
           <Route path="templates/*">
             <Route path="banner" element={<BannerPage />} />
             <Route path="block" element={<BlockContentPage />} />
-            <Route path="carousel" element={<CauroselPage />} />
+            <Route path="carousel" element={<CarouselPage />} />
           </Route>
 
           <Route path="*" element={<HomePage />} />
