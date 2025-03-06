@@ -5,6 +5,7 @@ import ContentView from "../ContentView";
 import TitleFirst from "../Titles/First.title";
 import Button from "../UI/Button";
 import { RowLayout } from "../../Styles/Row";
+import ArrowRightIcon from "../UI/Icons/ArrowRight";
 
 export default function BlockFirst({
   type,
@@ -20,7 +21,11 @@ export default function BlockFirst({
           <TitleFirst title={title} titleBody={titleBody} />
           <Stl.Right>
             <ContentView content={content} />
-            <Button href={linkDetail}>Xem thêm</Button>
+            <Stl.ButtonSeeMore>
+              <Stl.Button linkDetail={linkDetail} icon={<ArrowRightIcon />}>
+                Xem thêm
+              </Stl.Button>
+            </Stl.ButtonSeeMore>
           </Stl.Right>
         </RowLayout>
       </ContainerStl>
@@ -45,5 +50,16 @@ const Stl = {
     flex-flow: column;
     justify-content: flex-start;
     text-align: justify;
+  `,
+  ButtonSeeMore: styled.div`
+    display: block;
+    margin-top: 48px;
+  `,
+  Button: styled(Button)`
+    @media (min-width: 768px) {
+      max-width: 220px;
+      display: block;
+      margin: 0;
+    }
   `,
 };

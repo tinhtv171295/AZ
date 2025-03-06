@@ -1,53 +1,48 @@
-import { PropsWithChildren } from "react";
+import React, { PropsWithChildren } from "react";
+import { NavLink } from "react-router-dom";
 import styled from "styled-components";
 
-type ButtonAppearance = "light" | "dark";
+export type ButtonAppearance = "light" | "dark";
 
 type Props = PropsWithChildren & {
-  href?: string;
+  linkDetail?: string;
   title?: string;
   appearance?: ButtonAppearance;
-  transparent?: boolean;
+  icon?: React.ReactNode;
   onClick?: () => void;
 };
 
 export default function Button({
   children,
-  href,
+  linkDetail,
   title,
   appearance = "light",
-  transparent,
+  icon,
   onClick,
 }: Props) {
   return (
     <Stl.Button
-      href={href}
+      to={`${linkDetail}`}
       title={title}
       $appearance={appearance}
-      $transparent={transparent}
       onClick={onClick}
     >
-      {children}
+      {children} <Stl.WrapIcon>{icon}</Stl.WrapIcon>
     </Stl.Button>
   );
 }
 
 const Stl = {
-  Button: styled.a<{ $appearance: ButtonAppearance; $transparent?: boolean }>`
-    display: block !important;
+  Button: styled(NavLink)<{ $appearance: ButtonAppearance }>`
+    display: inline-block;
     text-align: center;
     outline: none;
     padding: 0 10px;
     overflow: hidden;
-    height: 40px;
-    width: fit-content;
-    color: ${({ $appearance }) => ($appearance === "dark" ? "#fff" : "#333")};
-    background: ${({ $appearance }) =>
-      $appearance === "light" ? "#fff" : "#333"};
     border: solid 1px transparent;
-    border: solid 1px
-      ${({ $appearance }) => ($appearance === "light" ? "#333" : "#fff")};
-    text-decoration: none;
+    cursor: pointer;
+    color: ${({ $appearance }) => ($appearance === "light" ? "#333" : "#fff")};
+    height: 40px;
     line-height: 40px;
     font-weight: 400;
     text-transform: uppercase;
@@ -55,37 +50,29 @@ const Stl = {
     -webkit-transition: all 0.3s ease;
     -moz-transition: all 0.3s ease;
     transition: all 0.3s ease;
+    background: ${({ $appearance }) =>
+      $appearance === "light" ? "#fff" : "#333"};
+    border: solid 1px
+      ${({ $appearance }) => ($appearance === "light" ? "#333" : "#fff")};
+    min-width: 150px;
 
-    ${({ $transparent }) =>
-      $transparent === undefined
-        ? ""
-        : $transparent
-        ? "background: transparent;"
-        : ""}
-
-    cursor: pointer;
+    @media (min-width: 768px) {
+      max-width: 220px;
+      display: block;
+      margin: 0;
+    }
 
     &:hover {
       background: ${({ $appearance }) =>
         $appearance === "light" ? "#333" : "#fff"};
       color: ${({ $appearance }) =>
         $appearance === "light" ? "#fff" : "#333"};
-
-      ${({ $transparent }) =>
-        $transparent === undefined
-          ? ""
-          : $transparent
-          ? "background: transparent;"
-          : ""}
-
-      ${({ $transparent, $appearance }) =>
-        $transparent === undefined
-          ? ""
-          : $transparent
-          ? $appearance === "light"
-            ? "color:#333;"
-            : "color:#fff;"
-          : ""}
     }
+  `,
+  WrapIcon: styled.span`
+    vertical-align: -2px;
+    width: 7px;
+    position: relative;
+    left: 17%;
   `,
 };

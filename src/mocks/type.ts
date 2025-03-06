@@ -1,5 +1,5 @@
 import BannerType from "../components/Banners/banner.type";
-import BlockContentType from "../components/BlockContentOld/block.type";
+import BlockContentType from "../components/BlockContent/block.type";
 import CarouselType from "../components/Carousels/carousel.type";
 import FooterType from "../components/Footer/type";
 

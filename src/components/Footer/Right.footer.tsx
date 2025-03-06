@@ -12,7 +12,9 @@ export default function FooterRight({ type, dataContent }: IBlock) {
       <Stl.IconFT>
         {dataContent?.map((item, i) => (
           <Stl.Icon key={i}>
-            <span>{item.image}</span>
+            <Stl.IconWrap
+              dangerouslySetInnerHTML={{ __html: `${item.image}` }}
+            ></Stl.IconWrap>
           </Stl.Icon>
         ))}
       </Stl.IconFT>
@@ -74,6 +76,16 @@ const Stl = {
     }
     &:hover {
       color: #428dff;
+    }
+  `,
+  IconWrap: styled.span`
+    display: inline-block;
+    /* width: 8px; */
+    height: 15px;
+
+    svg {
+      display: block;
+      height: 100%;
     }
   `,
 };

@@ -1,13 +1,14 @@
 import { styled } from "styled-components";
 import Button from "../UI/Button";
+import TitleType from "./type";
+import ArrowRightIcon from "../UI/Icons/ArrowRight";
 
-type Props = {
-  title: string;
-  titleBody?: string;
-  linkDetail?: string;
-};
-
-export default function TitleMain({ title, titleBody, linkDetail }: Props) {
+export default function TitleMain({
+  title,
+  titleBody,
+  linkDetail,
+  buttonAppearance,
+}: TitleType) {
   return (
     <Stl.Wrap>
       <Stl.Title>
@@ -16,7 +17,13 @@ export default function TitleMain({ title, titleBody, linkDetail }: Props) {
       {titleBody && <Stl.Content>{titleBody}</Stl.Content>}
       {linkDetail && (
         <Stl.ToDetail>
-          <Button>Xem thêm</Button>
+          <Button
+            linkDetail={linkDetail}
+            appearance={buttonAppearance}
+            icon={<ArrowRightIcon />}
+          >
+            Xem thêm
+          </Button>
         </Stl.ToDetail>
       )}
     </Stl.Wrap>

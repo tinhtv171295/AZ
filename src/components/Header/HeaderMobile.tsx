@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import IMenu from "../Menu/type";
 import { useState } from "react";
+import { NavLink } from "react-router-dom";
 
 type Props = {
   open: boolean;
@@ -19,14 +20,14 @@ export default function HeaderMobile({ open, menus }: Props) {
     <Stl.Wrap className={open ? "opened" : ""} style={{ display: "none" }}>
       <Stl.Panels>
         <Stl.Label>
-          <a href="#">Menu</a>
+          <NavLink to="/">Menu</NavLink>
         </Stl.Label>
         <Stl.WrapMenu>
           <Stl.Menu $open={true}>
             {menus.map((menu, i) => (
               <Stl.Item key={i}>
                 <Stl.ItemLabel>
-                  <Stl.Link>{menu.name}</Stl.Link>
+                  <Stl.Link to={`${menu.path}`}>{menu.name}</Stl.Link>
                   {menu.menu && (
                     <Stl.ButtonArrow
                       $open={openMenu === i}
@@ -38,7 +39,9 @@ export default function HeaderMobile({ open, menus }: Props) {
                   <Stl.Menu $open={openMenu === i}>
                     {menu.menu.map((item, id) => (
                       <Stl.Item key={id}>
-                        <Stl.LinkSub>{item.name}</Stl.LinkSub>
+                        <Stl.LinkSub to={`${item.path}`}>
+                          {item.name}
+                        </Stl.LinkSub>
                       </Stl.Item>
                     ))}
                   </Stl.Menu>
@@ -184,7 +187,7 @@ const Stl = {
     justify-content: space-between;
     align-items: center;
   `,
-  Link: styled.a`
+  Link: styled(NavLink)`
     -o-text-overflow: ellipsis;
     text-overflow: ellipsis;
     white-space: nowrap;
@@ -206,7 +209,7 @@ const Stl = {
       color: #428dff;
     }
   `,
-  LinkSub: styled.a`
+  LinkSub: styled(NavLink)`
     -o-text-overflow: ellipsis;
     text-overflow: ellipsis;
     white-space: nowrap;

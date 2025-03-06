@@ -1,11 +1,13 @@
 import { styled } from "styled-components";
 import TitleType from "./type";
 import Button from "../UI/Button";
+import ArrowRightIcon from "../UI/Icons/ArrowRight";
 
 export default function TitleFirst({
   title,
   titleBody,
   linkDetail,
+  buttonAppearance,
 }: TitleType) {
   return (
     <Stl.Wrap>
@@ -17,7 +19,13 @@ export default function TitleFirst({
       )}
       {linkDetail && (
         <Stl.ToDetail>
-          <Button>Xem thêm</Button>
+          <Button
+            linkDetail={linkDetail}
+            appearance={buttonAppearance}
+            icon={<ArrowRightIcon />}
+          >
+            Xem thêm
+          </Button>
         </Stl.ToDetail>
       )}
     </Stl.Wrap>

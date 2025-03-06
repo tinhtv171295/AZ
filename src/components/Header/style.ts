@@ -31,8 +31,8 @@ export const HeaderStl = {
       display: flex;
     }
   `,
-  WrapLogo: styled.h1``,
-  Logo: styled.h1`
+  WrapLogo: styled.div``,
+  Logo: styled.h2`
     width: 100%;
   `,
   LogoLink: styled(NavLink)`

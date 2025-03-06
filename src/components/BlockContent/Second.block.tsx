@@ -22,11 +22,13 @@ export default function BlockSecond({
       $backgroundColor={backgroundColor}
     >
       <ContainerStl>
-        <TitleSecond
-          title={title}
-          titleBody={titleBody}
-          linkDetail={linkDetail}
-        />
+        {title !== "" && (
+          <TitleSecond
+            title={title}
+            titleBody={titleBody}
+            linkDetail={linkDetail}
+          />
+        )}
         <Stl.WrapItem>
           <Swiper
             slidesPerView={2}

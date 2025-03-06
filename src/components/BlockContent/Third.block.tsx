@@ -19,6 +19,7 @@ export default function BlockThird({
           title={title}
           titleBody={titleBody}
           linkDetail={linkDetail}
+          buttonAppearance="dark"
         />
         <Stl.WrapItem>
           <RowLayout

@@ -22,6 +22,7 @@ import BlockTwelve from "../components/BlockContent/Twelve.block";
 import NoMarginBanner from "../components/Banners/NoMargin.banner";
 import FooterLeft from "../components/Footer/Left.footer";
 import FooterRight from "../components/Footer/Right.footer";
+import BlockThirTeen from "../components/BlockContent/Thirteen.block";
 
 export default function RenderLayout(block: IBlock) {
   switch (block.type) {
@@ -56,6 +57,8 @@ export default function RenderLayout(block: IBlock) {
       return <BlockEleven {...block} />;
     case "block-twelve":
       return <BlockTwelve {...block} />;
+    case "block-thirteen":
+      return <BlockThirTeen {...block} />;
     case "swiper-core-value":
       return <Carousel {...block} />;
     case "swiper-partner":
