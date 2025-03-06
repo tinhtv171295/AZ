@@ -33,33 +33,35 @@ export default function BlockNine({
   return (
     <Stl.Wrap data-component={type} $backgroundColor={backgroundColor}>
       <ContainerStl>
-        <Stl.TabHeader>
-          {dataContent.map((contact, i) => (
-            <Stl.TabItem
-              className={selected === i ? "active" : ""}
-              onClick={() => handleChangeId(i, contact.image)}
-              key={i}
-            >
-              <strong>{contact.description}: </strong>{" "}
-              <span>{contact.title}</span>
-            </Stl.TabItem>
-          ))}
-        </Stl.TabHeader>
+        <Stl.BodyContainer>
+          <Stl.TabHeader>
+            {dataContent.map((contact, i) => (
+              <Stl.TabItem
+                className={selected === i ? "active" : ""}
+                onClick={() => handleChangeId(i, contact.image)}
+                key={i}
+              >
+                <strong>{contact.description}: </strong>{" "}
+                <span>{contact.title}</span>
+              </Stl.TabItem>
+            ))}
+          </Stl.TabHeader>
 
-        <Stl.Body>
-          <Stl.Icon>
-            <LocationIcon />
-          </Stl.Icon>
-          <Stl.Desc>{dataContent[selected]?.description}:</Stl.Desc>
-          <Stl.Content>{dataContent[selected]?.content}</Stl.Content>
-        </Stl.Body>
-        <iframe
-          src={`https://www.google.com/maps/embed?${url}`}
-          width="100%"
-          height="450"
-          loading="lazy"
-          referrerPolicy="no-referrer-when-downgrade"
-        ></iframe>
+          <Stl.Body>
+            <Stl.Icon>
+              <LocationIcon />
+            </Stl.Icon>
+            <Stl.Desc>{dataContent[selected]?.description}:</Stl.Desc>
+            <Stl.Content>{dataContent[selected]?.content}</Stl.Content>
+          </Stl.Body>
+          <iframe
+            src={`https://www.google.com/maps/embed?${url}`}
+            width="100%"
+            height="450"
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </Stl.BodyContainer>
       </ContainerStl>
     </Stl.Wrap>
   );
@@ -76,6 +78,9 @@ const Stl = {
             min-height: 600px;
       `
         : `${$backgroundColor ? `background: ${$backgroundColor};` : ""}`}
+  `,
+  BodyContainer: styled.div`
+    margin-bottom: 50px;
   `,
   TabHeader: styled.div`
     display: flex;
